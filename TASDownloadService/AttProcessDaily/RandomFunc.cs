@@ -59,16 +59,47 @@ namespace TASDownloadService.AttProcessDaily
         private void AdjustSections()
         {
             TAS2013Entities ctx = new TAS2013Entities();
-            List<Section> secs = ctx.Sections.Where(aa => aa.CompanyID != 1).ToList();
+          //  List<Section> secs = ctx.Sections.Where(aa => aa.CompanyID != 1).ToList();
+            List<Section> secs = ctx.Sections.ToList();
             foreach (var sec in secs)
             {
                 try
                 {
-                    if (sec.CompanyID != sec.Department.CompanyID)
-                    {
+                    //for multiple companies
+                    //if (sec.CompanyID != sec.Department.CompanyID)
+                    //{
+
+                    //    List<Department> departments = new List<Department>();
+                    //    departments = ctx.Departments.Where(aa => aa.CompanyID == sec.CompanyID && aa.DeptName == sec.Department.DeptName).ToList();
+                    //    // check if the company that the employee belongs to contains the departmetn for the section
+                    //    if (departments.Count > 0)
+                    //    {
+                    //        // replace sections's department with the correct one
+                    //        sec.DeptID = departments.First().DeptID;
+                    //        ctx.SaveChanges();
+                    //    }
+                    //    else
+                    //    {
+                    //        // create the section in the new company
+                    //        Department department = new Department()
+                    //        {
+                    //            DeptName = sec.Department.DeptName,
+                    //            CompanyID = sec.CompanyID
+                    //        };
+                    //        ctx.Departments.AddObject(department);
+                    //        ctx.SaveChanges();
+                    //        Department deptConfirm = ctx.Departments.First(aa => aa.DeptName == sec.Department.DeptName && aa.CompanyID == sec.CompanyID);
+                    //        sec.DeptID = deptConfirm.DeptID;
+                    //        ctx.SaveChanges();
+                    //    }
+
+
+
+                    //}
+                    
 
                         List<Department> departments = new List<Department>();
-                        departments = ctx.Departments.Where(aa => aa.CompanyID == sec.CompanyID && aa.DeptName == sec.Department.DeptName).ToList();
+                        departments = ctx.Departments.Where(aa =>aa.DeptName == sec.Department.DeptName).ToList();
                         // check if the company that the employee belongs to contains the departmetn for the section
                         if (departments.Count > 0)
                         {
@@ -81,19 +112,19 @@ namespace TASDownloadService.AttProcessDaily
                             // create the section in the new company
                             Department department = new Department()
                             {
-                                DeptName = sec.Department.DeptName,
-                                CompanyID = sec.CompanyID
+                                DeptName = sec.Department.DeptName
+                               
                             };
                             ctx.Departments.AddObject(department);
                             ctx.SaveChanges();
-                            Department deptConfirm = ctx.Departments.First(aa => aa.DeptName == sec.Department.DeptName && aa.CompanyID == sec.CompanyID);
+                            Department deptConfirm = ctx.Departments.First(aa => aa.DeptName == sec.Department.DeptName);
                             sec.DeptID = deptConfirm.DeptID;
                             ctx.SaveChanges();
                         }
 
 
 
-                    }
+                    
                 }
                 catch (Exception)
                 {

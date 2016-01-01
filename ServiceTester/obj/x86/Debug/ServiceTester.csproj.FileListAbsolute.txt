@@ -35,3 +35,6 @@ D:\Projects\CNS\Working Projects\Fatima Group\TASDownloadService\ServiceTester\b
 D:\Projects\CNS\Working Projects\Fatima Group\TASDownloadService\ServiceTester\obj\x86\Debug\ServiceTester.csprojResolveAssemblyReference.cache
 D:\Projects\CNS\Working Projects\Fatima Group\TASDownloadService\ServiceTester\obj\x86\Debug\ServiceTester.exe
 D:\Projects\CNS\Working Projects\Fatima Group\TASDownloadService\ServiceTester\obj\x86\Debug\ServiceTester.pdb
+D:\projects\Generic SCP Project\Service\TASDownloadService\ServiceTester\bin\Debug\ServiceTester.exe.config
+D:\projects\Generic SCP Project\Service\TASDownloadService\ServiceTester\obj\x86\Debug\ServiceTester.exe
+D:\projects\Generic SCP Project\Service\TASDownloadService\ServiceTester\obj\x86\Debug\ServiceTester.pdb

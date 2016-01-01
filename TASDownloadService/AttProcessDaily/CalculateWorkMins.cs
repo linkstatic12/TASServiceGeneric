@@ -35,7 +35,11 @@ namespace TASDownloadService.AttProcessDaily
                         attendanceRecord.StatusOT = true;
                         attendanceRecord.Remarks = attendanceRecord.Remarks + "[R-OT]";
                         // RoundOff Overtime
-                        if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                        //multi companies
+                       // if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                        //generic no companies
+                        if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4))
+                        
                         {
                             if (attendanceRecord.OTMin > 0)
                             {
@@ -218,7 +222,8 @@ namespace TASDownloadService.AttProcessDaily
                             }
                         }
                         // RoundOff Overtime
-                        if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                       // if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                        if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) )
                         {
                             if (attendanceRecord.OTMin > 0)
                             {
@@ -285,7 +290,9 @@ namespace TASDownloadService.AttProcessDaily
                             attendanceRecord.StatusOT = true;
                             attendanceRecord.Remarks = attendanceRecord.Remarks + "[R-OT]";
                             // RoundOff Overtime
-                            if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                           // if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                            if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4))
+                          
                             {
                                 if (attendanceRecord.OTMin > 0)
                                 {
@@ -352,7 +359,9 @@ namespace TASDownloadService.AttProcessDaily
                                     attendanceRecord.WorkMin = attendanceRecord.ShifMin;
                                 }
                                 // RoundOff Overtime
-                                if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                              //  if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                                    if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4))
+                               
                                 {
                                     if (attendanceRecord.OTMin > 0)
                                     {
@@ -414,7 +423,9 @@ namespace TASDownloadService.AttProcessDaily
                     attendanceRecord.StatusOT = true;
                     attendanceRecord.Remarks = attendanceRecord.Remarks + "[R-OT]";
                     // RoundOff Overtime
-                    if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                   // if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                        if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4))
+                   
                     {
                         if (attendanceRecord.OTMin > 0)
                         {
@@ -556,7 +567,9 @@ namespace TASDownloadService.AttProcessDaily
                         attendanceRecord.WorkMin = attendanceRecord.ShifMin;
                     }
                     // RoundOff Overtime
-                    if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                   // if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4) && attendanceRecord.Emp.CompanyID == 1)
+                        if ((attendanceRecord.Emp.EmpType.CatID == 2 || attendanceRecord.Emp.EmpType.CatID == 4))
+                    
                     {
                         if (attendanceRecord.OTMin > 0)
                         {

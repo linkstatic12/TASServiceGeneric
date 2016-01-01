@@ -296,11 +296,11 @@ namespace TASDownloadService
                         {
                             emps = cctx.Emps.Where(aa => aa.LocID == req.LocationID && aa.Status == true).ToList();
                         }
-                        // Process Entries of Companies
-                        if (req.Criteria=="C")
-                        {
-                            emps = cctx.Emps.Where(aa => aa.CompanyID == req.CompanyID && aa.Status == true).ToList();
-                        }
+                        //// Process Entries of Companies
+                        //if (req.Criteria=="C")
+                        //{
+                        //    emps = cctx.Emps.Where(aa => aa.CompanyID == req.CompanyID && aa.Status == true).ToList();
+                        //}
                         if (req.ProcessCat==true)
                         {
                             emps = emps.Where(aa => aa.EmpType.CatID == req.CatID).ToList();
@@ -372,8 +372,13 @@ namespace TASDownloadService
             List<AttData> _EmpAttData = new List<AttData>();
             _AttData = ctx.AttDatas.Where(aa => aa.AttDate >= startDate && aa.AttDate <= endDate).ToList();
             int count = 0;
-            List<Emp> _Emp = ctx.Emps.Where(em => em.EmpType.CatID == 3 && em.Status == true && em.CompanyID==1).ToList();
-            List<Emp> _oEmp = ctx.Emps.Where(em => em.CompanyID>1 && em.Status == true).ToList();
+            //for multi company names
+            //List<Emp> _Emp = ctx.Emps.Where(em => em.EmpType.CatID == 3 && em.Status == true && em.CompanyID==1).ToList();
+            //for single company
+            List<Emp> _Emp = ctx.Emps.Where(em => em.EmpType.CatID == 3 && em.Status == true).ToList();
+            //for multi company names
+           // List<Emp> _oEmp = ctx.Emps.Where(em => em.CompanyID>1 && em.Status == true).ToList();
+            List<Emp> _oEmp = ctx.Emps.Where(em => em.Status == true).ToList();
             _Emp.AddRange(_oEmp);
             int _TE = _Emp.Count;
             foreach (Emp emp in _Emp)
@@ -428,7 +433,10 @@ namespace TASDownloadService
             List<AttData> _EmpAttData = new List<AttData>();
             _AttData = context.AttDatas.Where(aa => aa.AttDate >= _startDate && aa.AttDate <= _endDate).ToList();
             int count = 0;
-           List<Emp> _Emp = context.Emps.Where(em => (em.EmpType.CatID !=3) && em.CompanyID==1 && em.Status == true).ToList();
+            //multi company 
+            //  List<Emp> _Emp = context.Emps.Where(em => (em.EmpType.CatID !=3) && em.CompanyID==1 && em.Status == true).ToList();
+            // generic no company
+              List<Emp> _Emp = context.Emps.Where(em => (em.EmpType.CatID !=3) && em.Status == true).ToList();
            List<Emp> _Emps = context.Emps.Where(em => (em.LocID==4 || em.LocID==5) && em.Status == true).ToList();
            _Emp.AddRange(_Emps);
             int _TE = context.Emps.Where(em => (em.EmpType.CatID == 4 || em.EmpType.CatID == 2) && em.Status == true).Count();

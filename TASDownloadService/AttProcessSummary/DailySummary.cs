@@ -19,14 +19,14 @@ namespace TASDownloadService.AttProcessSummary
 
         public DailySummaryClass(DateTime dateStart, DateTime dateEnd)
         {
-            List<Company> companies = new List<Company>();
+           // List<Company> companies = new List<Company>();
             List<Location> locs = new List<Location>();
             List<Section> secs = new List<Section>();
             List<Department> depts = new List<Department>();
             List<Shift> shifts = new List<Shift>();
             List<EmpType> empTypes = new List<EmpType>();
             List<Category> cats = new List<Category>();
-            companies = db.Companies.ToList();
+            //companies = db.Companies.ToList();
             locs = db.Locations.ToList();
             secs = db.Sections.ToList();
             depts = db.Departments.ToList();
@@ -36,10 +36,10 @@ namespace TASDownloadService.AttProcessSummary
             while (dateStart <= dateEnd)
             {
                 //CalculateSummary(dateStart, "A");
-                foreach (var company in companies)
-                {
-                    CalculateSummary(dateStart, "C", company.CompID,company.CompName);
-                }
+                //foreach (var company in companies)
+                //{
+                //    CalculateSummary(dateStart, "C", company.CompID,company.CompName);
+                //}
                 foreach (var loc in locs)
                 {
                     CalculateSummary(dateStart, "L", loc.LocID,loc.LocName);
