@@ -1,0 +1,2189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TAS_FF2000Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2000" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TAS_FF2000ModelStoreContainer">
+    <EntitySet Name="Abnormal" EntityType="TAS_FF2000Model.Store.Abnormal" store:Type="Tables" store:Schema="dbo" store:Name="Abnormal">
+      <DefiningQuery>SELECT 
+      [Abnormal].[AbDataNo] AS [AbDataNo], 
+      [Abnormal].[AbDate] AS [AbDate], 
+      [Abnormal].[AbString] AS [AbString], 
+      [Abnormal].[ReaderID] AS [ReaderID]
+      FROM [dbo].[Abnormal] AS [Abnormal]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AttData" EntityType="TAS_FF2000Model.Store.AttData" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AttDataMn" EntityType="TAS_FF2000Model.Store.AttDataMn" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AttDataMnCnt" EntityType="TAS_FF2000Model.Store.AttDataMnCnt" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AttMnFull" EntityType="TAS_FF2000Model.Store.AttMnFull" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AttMnPer" EntityType="TAS_FF2000Model.Store.AttMnPer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Category" EntityType="TAS_FF2000Model.Store.Category" store:Type="Tables" store:Schema="dbo" store:Name="Category">
+      <DefiningQuery>SELECT 
+      [Category].[CatID] AS [CatID], 
+      [Category].[CatDesc] AS [CatDesc]
+      FROM [dbo].[Category] AS [Category]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Company" EntityType="TAS_FF2000Model.Store.Company" store:Type="Tables" store:Schema="dbo" store:Name="Company">
+      <DefiningQuery>SELECT 
+      [Company].[CompID] AS [CompID], 
+      [Company].[CompName] AS [CompName], 
+      [Company].[Address] AS [Address], 
+      [Company].[TelNo] AS [TelNo], 
+      [Company].[Email] AS [Email], 
+      [Company].[SecLevel] AS [SecLevel]
+      FROM [dbo].[Company] AS [Company]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Crew" EntityType="TAS_FF2000Model.Store.Crew" store:Type="Tables" store:Schema="dbo" store:Name="Crew">
+      <DefiningQuery>SELECT 
+      [Crew].[CrewID] AS [CrewID], 
+      [Crew].[CrewName] AS [CrewName]
+      FROM [dbo].[Crew] AS [Crew]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Dept" EntityType="TAS_FF2000Model.Store.Dept" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Designation" EntityType="TAS_FF2000Model.Store.Designation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="dtproperties" EntityType="TAS_FF2000Model.Store.dtproperties" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EMP" EntityType="TAS_FF2000Model.Store.EMP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EMP_jul01" EntityType="TAS_FF2000Model.Store.EMP_jul01" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LvAppl" EntityType="TAS_FF2000Model.Store.LvAppl" store:Type="Tables" store:Schema="dbo" store:Name="LvAppl">
+      <DefiningQuery>SELECT 
+      [LvAppl].[LvID] AS [LvID], 
+      [LvAppl].[LvDate] AS [LvDate], 
+      [LvAppl].[LvType] AS [LvType], 
+      [LvAppl].[EmpNo] AS [EmpNo], 
+      [LvAppl].[FromDate] AS [FromDate], 
+      [LvAppl].[ToDate] AS [ToDate], 
+      [LvAppl].[NoDays] AS [NoDays], 
+      [LvAppl].[HalfLeave] AS [HalfLeave], 
+      [LvAppl].[HalfAbsent] AS [HalfAbsent], 
+      [LvAppl].[LvReason] AS [LvReason], 
+      [LvAppl].[LvAddress] AS [LvAddress], 
+      [LvAppl].[DReason] AS [DReason], 
+      [LvAppl].[CreateBy] AS [CreateBy], 
+      [LvAppl].[Created] AS [Created], 
+      [LvAppl].[UpdateBy] AS [UpdateBy], 
+      [LvAppl].[Updated] AS [Updated], 
+      [LvAppl].[ApproveBy] AS [ApproveBy], 
+      [LvAppl].[Approved] AS [Approved], 
+      [LvAppl].[Status] AS [Status], 
+      [LvAppl].[Version] AS [Version]
+      FROM [dbo].[LvAppl] AS [LvAppl]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LvData" EntityType="TAS_FF2000Model.Store.LvData" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ManagedBy" EntityType="TAS_FF2000Model.Store.ManagedBy" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ManualAtt" EntityType="TAS_FF2000Model.Store.ManualAtt" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PollData" EntityType="TAS_FF2000Model.Store.PollData" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PollData1" EntityType="TAS_FF2000Model.Store.PollData1" store:Type="Tables" store:Schema="dbo" store:Name="PollData1">
+      <DefiningQuery>SELECT 
+      [PollData1].[TranNo] AS [TranNo], 
+      [PollData1].[PollAddress] AS [PollAddress], 
+      [PollData1].[CardNo] AS [CardNo], 
+      [PollData1].[EmpNo] AS [EmpNo], 
+      [PollData1].[DutyCode] AS [DutyCode], 
+      [PollData1].[EntryDate] AS [EntryDate], 
+      [PollData1].[EntryTime] AS [EntryTime], 
+      [PollData1].[ReaderID] AS [ReaderID], 
+      [PollData1].[EmpDate] AS [EmpDate], 
+      [PollData1].[Posting] AS [Posting], 
+      [PollData1].[Status] AS [Status], 
+      [PollData1].[Split] AS [Split]
+      FROM [dbo].[PollData1] AS [PollData1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Query4" EntityType="TAS_FF2000Model.Store.Query4" store:Type="Tables" store:Schema="dbo" store:Name="Query4">
+      <DefiningQuery>SELECT 
+      [Query4].[TranNo] AS [TranNo], 
+      [Query4].[PollAddress] AS [PollAddress], 
+      [Query4].[CardNo] AS [CardNo], 
+      [Query4].[EmpNo] AS [EmpNo], 
+      [Query4].[DutyCode] AS [DutyCode], 
+      [Query4].[EntryDate] AS [EntryDate], 
+      [Query4].[EntryTime] AS [EntryTime], 
+      [Query4].[ReaderID] AS [ReaderID], 
+      [Query4].[EmpDate] AS [EmpDate], 
+      [Query4].[Posting] AS [Posting], 
+      [Query4].[Status] AS [Status], 
+      [Query4].[Split] AS [Split]
+      FROM [dbo].[Query4] AS [Query4]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Roster" EntityType="TAS_FF2000Model.Store.Roster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roster1" EntityType="TAS_FF2000Model.Store.Roster1" store:Type="Tables" store:Schema="dbo" store:Name="Roster1">
+      <DefiningQuery>SELECT 
+      [Roster1].[RosterID] AS [RosterID], 
+      [Roster1].[EmpNo] AS [EmpNo], 
+      [Roster1].[DutyDate] AS [DutyDate], 
+      [Roster1].[EmpDate] AS [EmpDate], 
+      [Roster1].[DutyCode] AS [DutyCode], 
+      [Roster1].[DutyTime] AS [DutyTime], 
+      [Roster1].[Remarks] AS [Remarks], 
+      [Roster1].[WrkMin] AS [WrkMin]
+      FROM [dbo].[Roster1] AS [Roster1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RosterF" EntityType="TAS_FF2000Model.Store.RosterF" store:Type="Tables" store:Schema="dbo" store:Name="RosterF">
+      <DefiningQuery>SELECT 
+      [RosterF].[RosterID] AS [RosterID], 
+      [RosterF].[EmpNo] AS [EmpNo], 
+      [RosterF].[DutyDate] AS [DutyDate], 
+      [RosterF].[EmpDate] AS [EmpDate], 
+      [RosterF].[DutyCode] AS [DutyCode], 
+      [RosterF].[DutyTime] AS [DutyTime], 
+      [RosterF].[Remarks] AS [Remarks], 
+      [RosterF].[WrkMin] AS [WrkMin]
+      FROM [dbo].[RosterF] AS [RosterF]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Section" EntityType="TAS_FF2000Model.Store.Section" store:Type="Tables" store:Schema="dbo" store:Name="Section">
+      <DefiningQuery>SELECT 
+      [Section].[SectionID] AS [SectionID], 
+      [Section].[SectionName] AS [SectionName]
+      FROM [dbo].[Section] AS [Section]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Shift" EntityType="TAS_FF2000Model.Store.Shift" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ShiftType" EntityType="TAS_FF2000Model.Store.ShiftType" store:Type="Tables" store:Schema="dbo" store:Name="ShiftType">
+      <DefiningQuery>SELECT 
+      [ShiftType].[ShiftTypeID] AS [ShiftTypeID], 
+      [ShiftType].[ShiftTypeName] AS [ShiftTypeName]
+      FROM [dbo].[ShiftType] AS [ShiftType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SystemLog" EntityType="TAS_FF2000Model.Store.SystemLog" store:Type="Tables" store:Schema="dbo" store:Name="SystemLog">
+      <DefiningQuery>SELECT 
+      [SystemLog].[LogNo] AS [LogNo], 
+      [SystemLog].[LogDate] AS [LogDate], 
+      [SystemLog].[LogTime] AS [LogTime], 
+      [SystemLog].[LogText] AS [LogText], 
+      [SystemLog].[LogType] AS [LogType]
+      FROM [dbo].[SystemLog] AS [SystemLog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VisData" EntityType="TAS_FF2000Model.Store.VisData" store:Type="Tables" store:Schema="dbo" store:Name="VisData">
+      <DefiningQuery>SELECT 
+      [VisData].[VDataID] AS [VDataID], 
+      [VisData].[VisitorID] AS [VisitorID], 
+      [VisData].[VisName] AS [VisName], 
+      [VisData].[Purpose] AS [Purpose], 
+      [VisData].[EmpID] AS [EmpID], 
+      [VisData].[VLevelID] AS [VLevelID], 
+      [VisData].[CardNo] AS [CardNo], 
+      [VisData].[ArrDate] AS [ArrDate], 
+      [VisData].[ArrTime] AS [ArrTime], 
+      [VisData].[DepDate] AS [DepDate], 
+      [VisData].[DepTime] AS [DepTime], 
+      [VisData].[PickupCity] AS [PickupCity], 
+      [VisData].[DropCity] AS [DropCity], 
+      [VisData].[Remarks] AS [Remarks], 
+      [VisData].[VisitType] AS [VisitType], 
+      [VisData].[Status] AS [Status], 
+      [VisData].[Accomd] AS [Accomd], 
+      [VisData].[SafetyInd] AS [SafetyInd]
+      FROM [dbo].[VisData] AS [VisData]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Visitor" EntityType="TAS_FF2000Model.Store.Visitor" store:Type="Tables" store:Schema="dbo" store:Name="Visitor">
+      <DefiningQuery>SELECT 
+      [Visitor].[VisID] AS [VisID], 
+      [Visitor].[VisName] AS [VisName], 
+      [Visitor].[NicNo] AS [NicNo], 
+      [Visitor].[Address1] AS [Address1], 
+      [Visitor].[Company] AS [Company], 
+      [Visitor].[OffPhone] AS [OffPhone], 
+      [Visitor].[CellPhone] AS [CellPhone], 
+      [Visitor].[Email] AS [Email], 
+      [Visitor].[Remarks] AS [Remarks], 
+      [Visitor].[VisType] AS [VisType]
+      FROM [dbo].[Visitor] AS [Visitor]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.Abnormal' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Abnormal">
+    <Key>
+      <PropertyRef Name="AbDataNo" />
+    </Key>
+    <Property Name="AbDataNo" Type="int" Nullable="false" />
+    <Property Name="AbDate" Type="smalldatetime" />
+    <Property Name="AbString" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReaderID" Type="smallint" />
+  </EntityType>
+  <EntityType Name="AttData">
+    <Key>
+      <PropertyRef Name="EmpDate" />
+    </Key>
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="AttDate" Type="smalldatetime" />
+    <Property Name="EmpID" Type="nvarchar" MaxLength="10" />
+    <Property Name="EmpName" Type="nvarchar" MaxLength="40" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="40" />
+    <Property Name="DeptID" Type="smallint" />
+    <Property Name="ShiftID" Type="smallint" />
+    <Property Name="LocID" Type="nvarchar" MaxLength="50" />
+    <Property Name="BP" Type="money" />
+    <Property Name="GP" Type="money" />
+    <Property Name="ProcessTimeIn" Type="tinyint" />
+    <Property Name="EmpDate" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="DutyCode" Type="nvarchar" MaxLength="4" />
+    <Property Name="DutyTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="Time0" Type="nvarchar" MaxLength="4" />
+    <Property Name="Time1" Type="nvarchar" MaxLength="4" />
+    <Property Name="Time2" Type="nvarchar" MaxLength="4" />
+    <Property Name="Time3" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin0" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout0" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin1" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout1" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin2" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout2" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin3" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout3" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin4" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout4" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin5" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout5" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin6" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout6" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin7" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout7" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin8" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout8" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin9" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout9" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin10" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout10" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin11" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout11" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin12" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout12" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin13" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout13" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin14" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout14" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin15" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout15" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin16" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout16" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin17" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout17" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin18" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout18" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin19" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout19" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin20" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout20" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin21" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout21" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin22" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout22" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin23" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout23" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin24" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout24" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin25" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout25" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin26" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout26" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin27" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout27" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin28" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout28" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin29" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout29" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin31" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout31" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin32" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout32" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin33" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout33" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin34" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout34" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin35" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout35" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin36" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout36" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin37" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout37" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin38" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout38" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin39" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout39" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin40" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout40" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin41" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout41" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin42" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout42" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin43" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout43" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tin44" Type="nvarchar" MaxLength="4" />
+    <Property Name="Tout44" Type="nvarchar" MaxLength="4" />
+    <Property Name="LateMin" Type="smallint" />
+    <Property Name="EarlyIn" Type="smallint" />
+    <Property Name="EarlyOut" Type="smallint" />
+    <Property Name="WrkMin" Type="smallint" />
+    <Property Name="ExtraMin" Type="smallint" />
+    <Property Name="ExtraMinGz" Type="smallint" />
+    <Property Name="OtMin" Type="smallint" />
+    <Property Name="PDays" Type="real" />
+    <Property Name="VDays" Type="smallint" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="200" />
+    <Property Name="StatusNR" Type="tinyint" />
+    <Property Name="StatusLT" Type="tinyint" />
+    <Property Name="StatusER" Type="tinyint" />
+    <Property Name="StatusEI" Type="tinyint" />
+    <Property Name="StatusAB" Type="tinyint" />
+    <Property Name="StatusAB3" Type="tinyint" />
+    <Property Name="StatusLV" Type="tinyint" />
+    <Property Name="StatusDO" Type="tinyint" />
+    <Property Name="StatusHD" Type="tinyint" />
+    <Property Name="StatusSL" Type="tinyint" />
+    <Property Name="StatusOT" Type="tinyint" />
+    <Property Name="StatusLWP" Type="tinyint" />
+    <Property Name="StatusMN" Type="tinyint" />
+    <Property Name="ShiftWrkMin" Type="smallint" />
+    <Property Name="SplitShift" Type="tinyint" />
+    <Property Name="ShiftBrkMin" Type="smallint" />
+    <Property Name="TypeID" Type="smallint" />
+    <Property Name="StatusNOT" Type="smallint" />
+    <Property Name="StatusGzOT" Type="smallint" />
+    <Property Name="ND" Type="smallint" />
+  </EntityType>
+  <EntityType Name="AttDataMn">
+    <Key>
+      <PropertyRef Name="EmpMonth" />
+    </Key>
+    <Property Name="Period" Type="nvarchar" MaxLength="4" />
+    <Property Name="EmpMonth" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="EmpID" Type="nvarchar" MaxLength="10" />
+    <Property Name="EmpName" Type="nvarchar" MaxLength="40" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="40" />
+    <Property Name="LocID" Type="int" />
+    <Property Name="DeptID" Type="smallint" />
+    <Property Name="ShiftID" Type="smallint" />
+    <Property Name="NoDays" Type="smallint" />
+    <Property Name="BP" Type="money" />
+    <Property Name="GP" Type="money" />
+    <Property Name="D1" Type="nvarchar" MaxLength="1" />
+    <Property Name="D2" Type="nvarchar" MaxLength="4" />
+    <Property Name="D3" Type="nvarchar" MaxLength="1" />
+    <Property Name="D4" Type="nvarchar" MaxLength="1" />
+    <Property Name="D5" Type="nvarchar" MaxLength="1" />
+    <Property Name="D6" Type="nvarchar" MaxLength="1" />
+    <Property Name="D7" Type="nvarchar" MaxLength="1" />
+    <Property Name="D8" Type="nvarchar" MaxLength="1" />
+    <Property Name="D9" Type="nvarchar" MaxLength="1" />
+    <Property Name="D10" Type="nvarchar" MaxLength="1" />
+    <Property Name="D11" Type="nvarchar" MaxLength="1" />
+    <Property Name="D12" Type="nvarchar" MaxLength="1" />
+    <Property Name="D13" Type="nvarchar" MaxLength="1" />
+    <Property Name="D14" Type="nvarchar" MaxLength="1" />
+    <Property Name="D15" Type="nvarchar" MaxLength="1" />
+    <Property Name="D16" Type="nvarchar" MaxLength="1" />
+    <Property Name="D17" Type="nvarchar" MaxLength="1" />
+    <Property Name="D18" Type="nvarchar" MaxLength="1" />
+    <Property Name="D19" Type="nvarchar" MaxLength="1" />
+    <Property Name="D20" Type="nvarchar" MaxLength="1" />
+    <Property Name="D21" Type="nvarchar" MaxLength="1" />
+    <Property Name="D22" Type="nvarchar" MaxLength="1" />
+    <Property Name="D23" Type="nvarchar" MaxLength="1" />
+    <Property Name="D24" Type="nvarchar" MaxLength="1" />
+    <Property Name="D25" Type="nvarchar" MaxLength="1" />
+    <Property Name="D26" Type="nvarchar" MaxLength="1" />
+    <Property Name="D27" Type="nvarchar" MaxLength="1" />
+    <Property Name="D28" Type="nvarchar" MaxLength="1" />
+    <Property Name="D29" Type="nvarchar" MaxLength="1" />
+    <Property Name="D30" Type="nvarchar" MaxLength="1" />
+    <Property Name="D31" Type="nvarchar" MaxLength="1" />
+    <Property Name="PDays" Type="real" />
+    <Property Name="CntP" Type="smallint" />
+    <Property Name="CntA" Type="smallint" />
+    <Property Name="CntDO" Type="smallint" />
+    <Property Name="CntGH" Type="smallint" />
+    <Property Name="CntHD" Type="smallint" />
+    <Property Name="CntDD" Type="smallint" />
+    <Property Name="CntCL" Type="real" />
+    <Property Name="CntSL" Type="real" />
+    <Property Name="CntAL" Type="smallint" />
+    <Property Name="CntSPL" Type="real" />
+    <Property Name="CntCPL" Type="real" />
+    <Property Name="CntSSL" Type="real" />
+    <Property Name="CntOFD" Type="real" />
+    <Property Name="Status" Type="nvarchar" MaxLength="1" />
+    <Property Name="D1O" Type="real" />
+    <Property Name="D2O" Type="real" />
+    <Property Name="D3O" Type="real" />
+    <Property Name="D4O" Type="real" />
+    <Property Name="D5O" Type="real" />
+    <Property Name="D6O" Type="real" />
+    <Property Name="D7O" Type="real" />
+    <Property Name="D8O" Type="real" />
+    <Property Name="D9O" Type="real" />
+    <Property Name="D10O" Type="real" />
+    <Property Name="D11O" Type="real" />
+    <Property Name="D12O" Type="real" />
+    <Property Name="D13O" Type="real" />
+    <Property Name="D14O" Type="real" />
+    <Property Name="D15O" Type="real" />
+    <Property Name="D16O" Type="real" />
+    <Property Name="D17O" Type="real" />
+    <Property Name="D18O" Type="real" />
+    <Property Name="D19O" Type="real" />
+    <Property Name="D20O" Type="real" />
+    <Property Name="D21O" Type="real" />
+    <Property Name="D22O" Type="real" />
+    <Property Name="D23O" Type="real" />
+    <Property Name="D24O" Type="real" />
+    <Property Name="D25O" Type="real" />
+    <Property Name="D26O" Type="real" />
+    <Property Name="D27O" Type="real" />
+    <Property Name="D28O" Type="real" />
+    <Property Name="D29O" Type="real" />
+    <Property Name="D30O" Type="real" />
+    <Property Name="D31O" Type="real" />
+    <Property Name="D1EI" Type="real" />
+    <Property Name="D2EI" Type="real" />
+    <Property Name="D3EI" Type="real" />
+    <Property Name="D4EI" Type="real" />
+    <Property Name="D5EI" Type="real" />
+    <Property Name="D6EI" Type="real" />
+    <Property Name="D7EI" Type="real" />
+    <Property Name="D8EI" Type="real" />
+    <Property Name="D9EI" Type="real" />
+    <Property Name="D10EI" Type="real" />
+    <Property Name="D11EI" Type="real" />
+    <Property Name="D12EI" Type="real" />
+    <Property Name="D13EI" Type="real" />
+    <Property Name="D14EI" Type="real" />
+    <Property Name="D15EI" Type="real" />
+    <Property Name="D16EI" Type="real" />
+    <Property Name="D17EI" Type="real" />
+    <Property Name="D18EI" Type="real" />
+    <Property Name="D19EI" Type="real" />
+    <Property Name="D20EI" Type="real" />
+    <Property Name="D21EI" Type="real" />
+    <Property Name="D22EI" Type="real" />
+    <Property Name="D23EI" Type="real" />
+    <Property Name="D24EI" Type="real" />
+    <Property Name="D25EI" Type="real" />
+    <Property Name="D26EI" Type="real" />
+    <Property Name="D27EI" Type="real" />
+    <Property Name="D28EI" Type="real" />
+    <Property Name="D29EI" Type="real" />
+    <Property Name="D30EI" Type="real" />
+    <Property Name="D31EI" Type="real" />
+    <Property Name="D1EO" Type="real" />
+    <Property Name="D2EO" Type="real" />
+    <Property Name="D3EO" Type="real" />
+    <Property Name="D4EO" Type="real" />
+    <Property Name="D5EO" Type="real" />
+    <Property Name="D6EO" Type="real" />
+    <Property Name="D7EO" Type="real" />
+    <Property Name="D8EO" Type="real" />
+    <Property Name="D9EO" Type="real" />
+    <Property Name="D10EO" Type="real" />
+    <Property Name="D11EO" Type="real" />
+    <Property Name="D12EO" Type="real" />
+    <Property Name="D13EO" Type="real" />
+    <Property Name="D14EO" Type="real" />
+    <Property Name="D15EO" Type="real" />
+    <Property Name="D16EO" Type="real" />
+    <Property Name="D17EO" Type="real" />
+    <Property Name="D18EO" Type="real" />
+    <Property Name="D19EO" Type="real" />
+    <Property Name="D20EO" Type="real" />
+    <Property Name="D21EO" Type="real" />
+    <Property Name="D22EO" Type="real" />
+    <Property Name="D23EO" Type="real" />
+    <Property Name="D24EO" Type="real" />
+    <Property Name="D25EO" Type="real" />
+    <Property Name="D26EO" Type="real" />
+    <Property Name="D27EO" Type="real" />
+    <Property Name="D28EO" Type="real" />
+    <Property Name="D29EO" Type="real" />
+    <Property Name="D30EO" Type="real" />
+    <Property Name="D31EO" Type="real" />
+    <Property Name="D1LI" Type="real" />
+    <Property Name="D2LI" Type="real" />
+    <Property Name="D3LI" Type="real" />
+    <Property Name="D4LI" Type="real" />
+    <Property Name="D5LI" Type="real" />
+    <Property Name="D6LI" Type="real" />
+    <Property Name="D7LI" Type="real" />
+    <Property Name="D8LI" Type="real" />
+    <Property Name="D9LI" Type="real" />
+    <Property Name="D10LI" Type="real" />
+    <Property Name="D11LI" Type="real" />
+    <Property Name="D12LI" Type="real" />
+    <Property Name="D13LI" Type="real" />
+    <Property Name="D14LI" Type="real" />
+    <Property Name="D15LI" Type="real" />
+    <Property Name="D16LI" Type="real" />
+    <Property Name="D17LI" Type="real" />
+    <Property Name="D18LI" Type="real" />
+    <Property Name="D19LI" Type="real" />
+    <Property Name="D20LI" Type="real" />
+    <Property Name="D21LI" Type="real" />
+    <Property Name="D22LI" Type="real" />
+    <Property Name="D23LI" Type="real" />
+    <Property Name="D24LI" Type="real" />
+    <Property Name="D25LI" Type="real" />
+    <Property Name="D26LI" Type="real" />
+    <Property Name="D27LI" Type="real" />
+    <Property Name="D28LI" Type="real" />
+    <Property Name="D29LI" Type="real" />
+    <Property Name="D30LI" Type="real" />
+    <Property Name="D31LI" Type="real" />
+    <Property Name="CntOT" Type="real" />
+    <Property Name="CntGzOT" Type="real" />
+    <Property Name="CntLI" Type="real" />
+    <Property Name="CntEI" Type="real" />
+    <Property Name="CntEO" Type="real" />
+    <Property Name="CntShort" Type="real" />
+    <Property Name="CntExtra" Type="real" />
+  </EntityType>
+  <EntityType Name="AttDataMnCnt">
+    <Key>
+      <PropertyRef Name="EmpMonth" />
+    </Key>
+    <Property Name="Period" Type="nvarchar" MaxLength="4" />
+    <Property Name="EmpMonth" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="EmpID" Type="nvarchar" MaxLength="10" />
+    <Property Name="EmpName" Type="nvarchar" MaxLength="40" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="40" />
+    <Property Name="LocID" Type="int" />
+    <Property Name="DeptID" Type="smallint" />
+    <Property Name="ShiftID" Type="smallint" />
+    <Property Name="NoDays" Type="smallint" />
+    <Property Name="BP" Type="money" />
+    <Property Name="GP" Type="money" />
+    <Property Name="D1" Type="nvarchar" MaxLength="1" />
+    <Property Name="D2" Type="nvarchar" MaxLength="4" />
+    <Property Name="D3" Type="nvarchar" MaxLength="1" />
+    <Property Name="D4" Type="nvarchar" MaxLength="1" />
+    <Property Name="D5" Type="nvarchar" MaxLength="1" />
+    <Property Name="D6" Type="nvarchar" MaxLength="1" />
+    <Property Name="D7" Type="nvarchar" MaxLength="1" />
+    <Property Name="D8" Type="nvarchar" MaxLength="1" />
+    <Property Name="D9" Type="nvarchar" MaxLength="1" />
+    <Property Name="D10" Type="nvarchar" MaxLength="1" />
+    <Property Name="D11" Type="nvarchar" MaxLength="1" />
+    <Property Name="D12" Type="nvarchar" MaxLength="1" />
+    <Property Name="D13" Type="nvarchar" MaxLength="1" />
+    <Property Name="D14" Type="nvarchar" MaxLength="1" />
+    <Property Name="D15" Type="nvarchar" MaxLength="1" />
+    <Property Name="D16" Type="nvarchar" MaxLength="1" />
+    <Property Name="D17" Type="nvarchar" MaxLength="1" />
+    <Property Name="D18" Type="nvarchar" MaxLength="1" />
+    <Property Name="D19" Type="nvarchar" MaxLength="1" />
+    <Property Name="D20" Type="nvarchar" MaxLength="1" />
+    <Property Name="D21" Type="nvarchar" MaxLength="1" />
+    <Property Name="D22" Type="nvarchar" MaxLength="1" />
+    <Property Name="D23" Type="nvarchar" MaxLength="1" />
+    <Property Name="D24" Type="nvarchar" MaxLength="1" />
+    <Property Name="D25" Type="nvarchar" MaxLength="1" />
+    <Property Name="D26" Type="nvarchar" MaxLength="1" />
+    <Property Name="D27" Type="nvarchar" MaxLength="1" />
+    <Property Name="D28" Type="nvarchar" MaxLength="1" />
+    <Property Name="D29" Type="nvarchar" MaxLength="1" />
+    <Property Name="D30" Type="nvarchar" MaxLength="1" />
+    <Property Name="D31" Type="nvarchar" MaxLength="1" />
+    <Property Name="PDays" Type="real" />
+    <Property Name="CntP" Type="smallint" />
+    <Property Name="CntA" Type="smallint" />
+    <Property Name="CntDO" Type="smallint" />
+    <Property Name="CntGH" Type="smallint" />
+    <Property Name="CntHD" Type="smallint" />
+    <Property Name="CntDD" Type="smallint" />
+    <Property Name="CntCL" Type="real" />
+    <Property Name="CntSL" Type="real" />
+    <Property Name="CntAL" Type="smallint" />
+    <Property Name="CntSPL" Type="real" />
+    <Property Name="CntCPL" Type="real" />
+    <Property Name="CntSSL" Type="real" />
+    <Property Name="CntOFD" Type="real" />
+    <Property Name="Status" Type="nvarchar" MaxLength="1" />
+    <Property Name="D1O" Type="real" />
+    <Property Name="D2O" Type="real" />
+    <Property Name="D3O" Type="real" />
+    <Property Name="D4O" Type="real" />
+    <Property Name="D5O" Type="real" />
+    <Property Name="D6O" Type="real" />
+    <Property Name="D7O" Type="real" />
+    <Property Name="D8O" Type="real" />
+    <Property Name="D9O" Type="real" />
+    <Property Name="D10O" Type="real" />
+    <Property Name="D11O" Type="real" />
+    <Property Name="D12O" Type="real" />
+    <Property Name="D13O" Type="real" />
+    <Property Name="D14O" Type="real" />
+    <Property Name="D15O" Type="real" />
+    <Property Name="D16O" Type="real" />
+    <Property Name="D17O" Type="real" />
+    <Property Name="D18O" Type="real" />
+    <Property Name="D19O" Type="real" />
+    <Property Name="D20O" Type="real" />
+    <Property Name="D21O" Type="real" />
+    <Property Name="D22O" Type="real" />
+    <Property Name="D23O" Type="real" />
+    <Property Name="D24O" Type="real" />
+    <Property Name="D25O" Type="real" />
+    <Property Name="D26O" Type="real" />
+    <Property Name="D27O" Type="real" />
+    <Property Name="D28O" Type="real" />
+    <Property Name="D29O" Type="real" />
+    <Property Name="D30O" Type="real" />
+    <Property Name="D31O" Type="real" />
+    <Property Name="D1EI" Type="real" />
+    <Property Name="D2EI" Type="real" />
+    <Property Name="D3EI" Type="real" />
+    <Property Name="D4EI" Type="real" />
+    <Property Name="D5EI" Type="real" />
+    <Property Name="D6EI" Type="real" />
+    <Property Name="D7EI" Type="real" />
+    <Property Name="D8EI" Type="real" />
+    <Property Name="D9EI" Type="real" />
+    <Property Name="D10EI" Type="real" />
+    <Property Name="D11EI" Type="real" />
+    <Property Name="D12EI" Type="real" />
+    <Property Name="D13EI" Type="real" />
+    <Property Name="D14EI" Type="real" />
+    <Property Name="D15EI" Type="real" />
+    <Property Name="D16EI" Type="real" />
+    <Property Name="D17EI" Type="real" />
+    <Property Name="D18EI" Type="real" />
+    <Property Name="D19EI" Type="real" />
+    <Property Name="D20EI" Type="real" />
+    <Property Name="D21EI" Type="real" />
+    <Property Name="D22EI" Type="real" />
+    <Property Name="D23EI" Type="real" />
+    <Property Name="D24EI" Type="real" />
+    <Property Name="D25EI" Type="real" />
+    <Property Name="D26EI" Type="real" />
+    <Property Name="D27EI" Type="real" />
+    <Property Name="D28EI" Type="real" />
+    <Property Name="D29EI" Type="real" />
+    <Property Name="D30EI" Type="real" />
+    <Property Name="D31EI" Type="real" />
+    <Property Name="D1EO" Type="real" />
+    <Property Name="D2EO" Type="real" />
+    <Property Name="D3EO" Type="real" />
+    <Property Name="D4EO" Type="real" />
+    <Property Name="D5EO" Type="real" />
+    <Property Name="D6EO" Type="real" />
+    <Property Name="D7EO" Type="real" />
+    <Property Name="D8EO" Type="real" />
+    <Property Name="D9EO" Type="real" />
+    <Property Name="D10EO" Type="real" />
+    <Property Name="D11EO" Type="real" />
+    <Property Name="D12EO" Type="real" />
+    <Property Name="D13EO" Type="real" />
+    <Property Name="D14EO" Type="real" />
+    <Property Name="D15EO" Type="real" />
+    <Property Name="D16EO" Type="real" />
+    <Property Name="D17EO" Type="real" />
+    <Property Name="D18EO" Type="real" />
+    <Property Name="D19EO" Type="real" />
+    <Property Name="D20EO" Type="real" />
+    <Property Name="D21EO" Type="real" />
+    <Property Name="D22EO" Type="real" />
+    <Property Name="D23EO" Type="real" />
+    <Property Name="D24EO" Type="real" />
+    <Property Name="D25EO" Type="real" />
+    <Property Name="D26EO" Type="real" />
+    <Property Name="D27EO" Type="real" />
+    <Property Name="D28EO" Type="real" />
+    <Property Name="D29EO" Type="real" />
+    <Property Name="D30EO" Type="real" />
+    <Property Name="D31EO" Type="real" />
+    <Property Name="D1LI" Type="real" />
+    <Property Name="D2LI" Type="real" />
+    <Property Name="D3LI" Type="real" />
+    <Property Name="D4LI" Type="real" />
+    <Property Name="D5LI" Type="real" />
+    <Property Name="D6LI" Type="real" />
+    <Property Name="D7LI" Type="real" />
+    <Property Name="D8LI" Type="real" />
+    <Property Name="D9LI" Type="real" />
+    <Property Name="D10LI" Type="real" />
+    <Property Name="D11LI" Type="real" />
+    <Property Name="D12LI" Type="real" />
+    <Property Name="D13LI" Type="real" />
+    <Property Name="D14LI" Type="real" />
+    <Property Name="D15LI" Type="real" />
+    <Property Name="D16LI" Type="real" />
+    <Property Name="D17LI" Type="real" />
+    <Property Name="D18LI" Type="real" />
+    <Property Name="D19LI" Type="real" />
+    <Property Name="D20LI" Type="real" />
+    <Property Name="D21LI" Type="real" />
+    <Property Name="D22LI" Type="real" />
+    <Property Name="D23LI" Type="real" />
+    <Property Name="D24LI" Type="real" />
+    <Property Name="D25LI" Type="real" />
+    <Property Name="D26LI" Type="real" />
+    <Property Name="D27LI" Type="real" />
+    <Property Name="D28LI" Type="real" />
+    <Property Name="D29LI" Type="real" />
+    <Property Name="D30LI" Type="real" />
+    <Property Name="D31LI" Type="real" />
+    <Property Name="CntOT" Type="real" />
+    <Property Name="CntGzOT" Type="real" />
+    <Property Name="CntLI" Type="real" />
+    <Property Name="CntEI" Type="real" />
+    <Property Name="CntEO" Type="real" />
+    <Property Name="CntShort" Type="real" />
+    <Property Name="CntExtra" Type="real" />
+  </EntityType>
+  <EntityType Name="AttMnFull">
+    <Key>
+      <PropertyRef Name="EmpMonth" />
+    </Key>
+    <Property Name="Period" Type="nvarchar" MaxLength="6" />
+    <Property Name="EmpMonth" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="EmpNo" Type="char" MaxLength="50" />
+    <Property Name="EmpID" Type="char" MaxLength="50" />
+    <Property Name="EmpName" Type="char" MaxLength="50" />
+    <Property Name="D1" Type="char" MaxLength="1" />
+    <Property Name="D2" Type="char" MaxLength="1" />
+    <Property Name="D3" Type="char" MaxLength="1" />
+    <Property Name="D4" Type="char" MaxLength="1" />
+    <Property Name="D5" Type="char" MaxLength="1" />
+    <Property Name="D6" Type="char" MaxLength="1" />
+    <Property Name="D7" Type="char" MaxLength="1" />
+    <Property Name="D8" Type="char" MaxLength="1" />
+    <Property Name="D9" Type="char" MaxLength="1" />
+    <Property Name="D10" Type="char" MaxLength="1" />
+    <Property Name="D11" Type="char" MaxLength="1" />
+    <Property Name="D12" Type="char" MaxLength="1" />
+    <Property Name="D13" Type="char" MaxLength="1" />
+    <Property Name="D14" Type="char" MaxLength="1" />
+    <Property Name="D15" Type="char" MaxLength="1" />
+    <Property Name="D16" Type="char" MaxLength="1" />
+    <Property Name="D17" Type="char" MaxLength="1" />
+    <Property Name="D18" Type="char" MaxLength="1" />
+    <Property Name="D19" Type="char" MaxLength="1" />
+    <Property Name="D20" Type="char" MaxLength="1" />
+    <Property Name="D21" Type="char" MaxLength="1" />
+    <Property Name="D22" Type="char" MaxLength="1" />
+    <Property Name="D23" Type="char" MaxLength="1" />
+    <Property Name="D24" Type="char" MaxLength="1" />
+    <Property Name="D25" Type="char" MaxLength="1" />
+    <Property Name="D26" Type="char" MaxLength="1" />
+    <Property Name="D27" Type="char" MaxLength="1" />
+    <Property Name="D28" Type="char" MaxLength="1" />
+    <Property Name="D29" Type="char" MaxLength="1" />
+    <Property Name="D30" Type="char" MaxLength="1" />
+    <Property Name="D31" Type="char" MaxLength="1" />
+    <Property Name="TotalDays" Type="tinyint" />
+    <Property Name="WorkDays" Type="tinyint" />
+    <Property Name="PreDays" Type="tinyint" />
+    <Property Name="AbDays" Type="tinyint" />
+    <Property Name="RestDays" Type="tinyint" />
+    <Property Name="GZDays" Type="tinyint" />
+    <Property Name="LeaveDays" Type="tinyint" />
+    <Property Name="OfficialDutyDays" Type="tinyint" />
+    <Property Name="TEarlyIn" Type="smallint" />
+    <Property Name="TEarlyOut" Type="smallint" />
+    <Property Name="TLateIn" Type="smallint" />
+    <Property Name="TLateOut" Type="smallint" />
+    <Property Name="TWorkTime" Type="smallint" />
+    <Property Name="TNOT" Type="smallint" />
+    <Property Name="TGZOT" Type="smallint" />
+    <Property Name="ExpectedWrkTime" Type="smallint" />
+    <Property Name="OT1" Type="smallint" />
+    <Property Name="OT2" Type="smallint" />
+    <Property Name="OT3" Type="smallint" />
+    <Property Name="OT4" Type="smallint" />
+    <Property Name="OT5" Type="smallint" />
+    <Property Name="OT6" Type="smallint" />
+    <Property Name="OT7" Type="smallint" />
+    <Property Name="OT8" Type="smallint" />
+    <Property Name="OT9" Type="smallint" />
+    <Property Name="OT10" Type="smallint" />
+    <Property Name="OT11" Type="smallint" />
+    <Property Name="OT12" Type="smallint" />
+    <Property Name="OT13" Type="smallint" />
+    <Property Name="OT14" Type="smallint" />
+    <Property Name="OT15" Type="smallint" />
+    <Property Name="OT16" Type="smallint" />
+    <Property Name="OT17" Type="smallint" />
+    <Property Name="OT18" Type="smallint" />
+    <Property Name="OT19" Type="smallint" />
+    <Property Name="OT20" Type="smallint" />
+    <Property Name="OT21" Type="smallint" />
+    <Property Name="OT22" Type="smallint" />
+    <Property Name="OT23" Type="smallint" />
+    <Property Name="OT24" Type="smallint" />
+    <Property Name="OT25" Type="smallint" />
+    <Property Name="OT26" Type="smallint" />
+    <Property Name="OT27" Type="smallint" />
+    <Property Name="OT28" Type="smallint" />
+    <Property Name="OT29" Type="smallint" />
+    <Property Name="OT30" Type="smallint" />
+    <Property Name="OT31" Type="smallint" />
+  </EntityType>
+  <EntityType Name="AttMnPer">
+    <Key>
+      <PropertyRef Name="EmpMonth" />
+    </Key>
+    <Property Name="Period" Type="nvarchar" MaxLength="6" />
+    <Property Name="EmpMonth" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmpID" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmpName" Type="nvarchar" MaxLength="50" />
+    <Property Name="D21" Type="char" MaxLength="1" />
+    <Property Name="D22" Type="char" MaxLength="1" />
+    <Property Name="D23" Type="char" MaxLength="1" />
+    <Property Name="D24" Type="char" MaxLength="1" />
+    <Property Name="D25" Type="char" MaxLength="1" />
+    <Property Name="D26" Type="char" MaxLength="1" />
+    <Property Name="D27" Type="char" MaxLength="1" />
+    <Property Name="D28" Type="char" MaxLength="1" />
+    <Property Name="D29" Type="char" MaxLength="1" />
+    <Property Name="D30" Type="char" MaxLength="1" />
+    <Property Name="D31" Type="char" MaxLength="1" />
+    <Property Name="D1" Type="char" MaxLength="1" />
+    <Property Name="D2" Type="char" MaxLength="1" />
+    <Property Name="D3" Type="char" MaxLength="1" />
+    <Property Name="D4" Type="char" MaxLength="1" />
+    <Property Name="D5" Type="char" MaxLength="1" />
+    <Property Name="D6" Type="char" MaxLength="1" />
+    <Property Name="D7" Type="char" MaxLength="1" />
+    <Property Name="D8" Type="char" MaxLength="1" />
+    <Property Name="D9" Type="char" MaxLength="1" />
+    <Property Name="D10" Type="char" MaxLength="1" />
+    <Property Name="D11" Type="char" MaxLength="1" />
+    <Property Name="D12" Type="char" MaxLength="1" />
+    <Property Name="D13" Type="char" MaxLength="1" />
+    <Property Name="D14" Type="char" MaxLength="1" />
+    <Property Name="D15" Type="char" MaxLength="1" />
+    <Property Name="D16" Type="char" MaxLength="1" />
+    <Property Name="D17" Type="char" MaxLength="1" />
+    <Property Name="D18" Type="char" MaxLength="1" />
+    <Property Name="D19" Type="char" MaxLength="1" />
+    <Property Name="D20" Type="char" MaxLength="1" />
+    <Property Name="TotalDays" Type="tinyint" />
+    <Property Name="WorkDays" Type="tinyint" />
+    <Property Name="PreDays" Type="tinyint" />
+    <Property Name="AbDays" Type="tinyint" />
+    <Property Name="RestDays" Type="tinyint" />
+    <Property Name="GZDays" Type="tinyint" />
+    <Property Name="LeaveDays" Type="tinyint" />
+    <Property Name="OfficialDutyDays" Type="tinyint" />
+    <Property Name="TEarlyIn" Type="smallint" />
+    <Property Name="TEarlyOut" Type="smallint" />
+    <Property Name="TLateIn" Type="smallint" />
+    <Property Name="TLateOut" Type="smallint" />
+    <Property Name="TWorkTime" Type="smallint" />
+    <Property Name="TNOT" Type="smallint" />
+    <Property Name="TGZOT" Type="smallint" />
+    <Property Name="ExpectedWrkTime" Type="smallint" />
+    <Property Name="OT1" Type="smallint" />
+    <Property Name="OT2" Type="smallint" />
+    <Property Name="OT3" Type="smallint" />
+    <Property Name="OT4" Type="smallint" />
+    <Property Name="OT5" Type="smallint" />
+    <Property Name="OT6" Type="smallint" />
+    <Property Name="OT7" Type="smallint" />
+    <Property Name="OT8" Type="smallint" />
+    <Property Name="OT9" Type="smallint" />
+    <Property Name="OT10" Type="smallint" />
+    <Property Name="OT11" Type="smallint" />
+    <Property Name="OT12" Type="smallint" />
+    <Property Name="OT13" Type="smallint" />
+    <Property Name="OT14" Type="smallint" />
+    <Property Name="OT15" Type="smallint" />
+    <Property Name="OT16" Type="smallint" />
+    <Property Name="OT17" Type="smallint" />
+    <Property Name="OT18" Type="smallint" />
+    <Property Name="OT19" Type="smallint" />
+    <Property Name="OT20" Type="smallint" />
+    <Property Name="OT21" Type="smallint" />
+    <Property Name="OT22" Type="smallint" />
+    <Property Name="OT23" Type="smallint" />
+    <Property Name="OT24" Type="smallint" />
+    <Property Name="OT25" Type="smallint" />
+    <Property Name="OT26" Type="smallint" />
+    <Property Name="OT27" Type="smallint" />
+    <Property Name="OT28" Type="smallint" />
+    <Property Name="OT29" Type="smallint" />
+    <Property Name="OT30" Type="smallint" />
+    <Property Name="OT31" Type="smallint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.Category' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CatID" />
+    </Key>
+    <Property Name="CatID" Type="smallint" Nullable="false" />
+    <Property Name="CatDesc" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.Company' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompID" />
+    </Key>
+    <Property Name="CompID" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="CompName" Type="nvarchar" MaxLength="40" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="TelNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecLevel" Type="tinyint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.Crew' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Crew">
+    <Key>
+      <PropertyRef Name="CrewID" />
+    </Key>
+    <Property Name="CrewID" Type="smallint" Nullable="false" />
+    <Property Name="CrewName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Dept">
+    <Key>
+      <PropertyRef Name="DeptID" />
+    </Key>
+    <Property Name="DeptID" Type="smallint" Nullable="false" />
+    <Property Name="DeptName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="DesignationID" />
+    </Key>
+    <Property Name="DesignationID" Type="float" Nullable="false" />
+    <Property Name="DesignationName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="dtproperties">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="objectid" Type="int" />
+    <Property Name="property" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="value" Type="varchar" MaxLength="255" />
+    <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+    <Property Name="lvalue" Type="image" />
+    <Property Name="version" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMP">
+    <Key>
+      <PropertyRef Name="EMPNO" />
+    </Key>
+    <Property Name="EmpID" Type="nvarchar" MaxLength="10" />
+    <Property Name="EMPNO" Type="nvarchar" Nullable="false" MaxLength="6" />
+    <Property Name="CardNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="EmpName" Type="nvarchar" MaxLength="255" />
+    <Property Name="FpID" Type="int" />
+    <Property Name="PinCode" Type="nvarchar" MaxLength="4" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Bloodgroup" Type="nvarchar" MaxLength="255" />
+    <Property Name="BirthDate" Type="smalldatetime" />
+    <Property Name="Gender" Type="smallint" />
+    <Property Name="MarStatus" Type="smallint" />
+    <Property Name="NICNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="PstAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="Reference" Type="nvarchar" MaxLength="50" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="255" />
+    <Property Name="DesignationID" Type="smallint" />
+    <Property Name="DeptID" Type="smallint" />
+    <Property Name="MID" Type="smallint" />
+    <Property Name="SectionID" Type="smallint" />
+    <Property Name="CrewID" Type="smallint" />
+    <Property Name="LocID" Type="smallint" />
+    <Property Name="ShiftID" Type="smallint" />
+    <Property Name="GradeID" Type="smallint" />
+    <Property Name="TypeID" Type="smallint" />
+    <Property Name="JobID" Type="smallint" />
+    <Property Name="Validdate" Type="smalldatetime" />
+    <Property Name="Issuedate" Type="smalldatetime" />
+    <Property Name="JoinDate" Type="smalldatetime" />
+    <Property Name="OverTime" Type="tinyint" />
+    <Property Name="OtRate" Type="money" />
+    <Property Name="WeeklyRest" Type="tinyint" />
+    <Property Name="AL" Type="money" />
+    <Property Name="CL" Type="money" />
+    <Property Name="SL" Type="money" />
+    <Property Name="CPL" Type="money" />
+    <Property Name="TotalLv" Type="money" />
+    <Property Name="HourBal" Type="smallint" />
+    <Property Name="ALDue" Type="smalldatetime" />
+    <Property Name="PFBalance" Type="money" />
+    <Property Name="GP" Type="money" />
+    <Property Name="AsBal" Type="money" />
+    <Property Name="All1" Type="money" />
+    <Property Name="All2" Type="money" />
+    <Property Name="All3" Type="money" />
+    <Property Name="All4" Type="money" />
+    <Property Name="All5" Type="money" />
+    <Property Name="All6" Type="money" />
+    <Property Name="Ded1" Type="money" />
+    <Property Name="Ded2" Type="money" />
+    <Property Name="Ded3" Type="money" />
+    <Property Name="Ded4" Type="money" />
+    <Property Name="Ded5" Type="money" />
+    <Property Name="Ded6" Type="money" />
+    <Property Name="Bank" Type="nvarchar" MaxLength="20" />
+    <Property Name="AccNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="ResignDate" Type="smalldatetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="1" />
+    <Property Name="SsNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="EobiNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="HInsuranceNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="200" />
+    <Property Name="LIDate" Type="smalldatetime" />
+    <Property Name="LIAmount" Type="smallint" />
+    <Property Name="NIDate" Type="smalldatetime" />
+    <Property Name="PFDed" Type="smallint" />
+    <Property Name="Eobi" Type="smallint" />
+    <Property Name="Bonus" Type="smallint" />
+    <Property Name="NoWarning" Type="smallint" />
+    <Property Name="ResignID" Type="smallint" />
+    <Property Name="NumRegFp" Type="smallint" />
+    <Property Name="AccessType" Type="tinyint" />
+    <Property Name="ProcessAtt" Type="tinyint" />
+    <Property Name="FlgFpData1" Type="nvarchar" MaxLength="1" />
+    <Property Name="FlgFpData2" Type="nvarchar" MaxLength="1" />
+    <Property Name="FlgFpData3" Type="nvarchar" MaxLength="1" />
+    <Property Name="BP" Type="money" />
+    <Property Name="ProcessTimeIn" Type="int" />
+    <Property Name="Probation" Type="tinyint" />
+    <Property Name="DisallowAL" Type="tinyint" />
+    <Property Name="LE" Type="smallint" />
+    <Property Name="HE" Type="smallint" />
+    <Property Name="Version" Type="smallint" />
+  </EntityType>
+  <EntityType Name="EMP_jul01">
+    <Key>
+      <PropertyRef Name="EMPNO" />
+    </Key>
+    <Property Name="EmpID" Type="nvarchar" MaxLength="10" />
+    <Property Name="EMPNO" Type="nvarchar" Nullable="false" MaxLength="6" />
+    <Property Name="CardNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="EmpName" Type="nvarchar" MaxLength="255" />
+    <Property Name="FpID" Type="int" />
+    <Property Name="PinCode" Type="nvarchar" MaxLength="4" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Bloodgroup" Type="nvarchar" MaxLength="255" />
+    <Property Name="BirthDate" Type="smalldatetime" />
+    <Property Name="Gender" Type="smallint" />
+    <Property Name="MarStatus" Type="smallint" />
+    <Property Name="NICNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="PstAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="Reference" Type="nvarchar" MaxLength="50" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="255" />
+    <Property Name="DesignationID" Type="smallint" />
+    <Property Name="DeptID" Type="smallint" />
+    <Property Name="SectionID" Type="smallint" />
+    <Property Name="CrewID" Type="smallint" />
+    <Property Name="LocID" Type="smallint" />
+    <Property Name="ShiftID" Type="smallint" />
+    <Property Name="GradeID" Type="smallint" />
+    <Property Name="TypeID" Type="smallint" />
+    <Property Name="JobID" Type="smallint" />
+    <Property Name="Validdate" Type="smalldatetime" />
+    <Property Name="Issuedate" Type="smalldatetime" />
+    <Property Name="JoinDate" Type="smalldatetime" />
+    <Property Name="OverTime" Type="tinyint" />
+    <Property Name="OtRate" Type="money" />
+    <Property Name="WeeklyRest" Type="tinyint" />
+    <Property Name="AL" Type="money" />
+    <Property Name="CL" Type="money" />
+    <Property Name="SL" Type="money" />
+    <Property Name="CPL" Type="money" />
+    <Property Name="TotalLv" Type="money" />
+    <Property Name="HourBal" Type="smallint" />
+    <Property Name="ALDue" Type="smalldatetime" />
+    <Property Name="PFBalance" Type="money" />
+    <Property Name="GP" Type="money" />
+    <Property Name="AsBal" Type="money" />
+    <Property Name="All1" Type="money" />
+    <Property Name="All2" Type="money" />
+    <Property Name="All3" Type="money" />
+    <Property Name="All4" Type="money" />
+    <Property Name="All5" Type="money" />
+    <Property Name="All6" Type="money" />
+    <Property Name="Ded1" Type="money" />
+    <Property Name="Ded2" Type="money" />
+    <Property Name="Ded3" Type="money" />
+    <Property Name="Ded4" Type="money" />
+    <Property Name="Ded5" Type="money" />
+    <Property Name="Ded6" Type="money" />
+    <Property Name="Bank" Type="nvarchar" MaxLength="20" />
+    <Property Name="AccNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="ResignDate" Type="smalldatetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="1" />
+    <Property Name="SsNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="EobiNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="HInsuranceNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="200" />
+    <Property Name="LIDate" Type="smalldatetime" />
+    <Property Name="LIAmount" Type="smallint" />
+    <Property Name="NIDate" Type="smalldatetime" />
+    <Property Name="PFDed" Type="smallint" />
+    <Property Name="Eobi" Type="smallint" />
+    <Property Name="Bonus" Type="smallint" />
+    <Property Name="NoWarning" Type="smallint" />
+    <Property Name="ResignID" Type="smallint" />
+    <Property Name="NumRegFp" Type="smallint" />
+    <Property Name="AccessType" Type="tinyint" />
+    <Property Name="ProcessAtt" Type="tinyint" />
+    <Property Name="FlgFpData1" Type="nvarchar" MaxLength="1" />
+    <Property Name="FlgFpData2" Type="nvarchar" MaxLength="1" />
+    <Property Name="FlgFpData3" Type="nvarchar" MaxLength="1" />
+    <Property Name="BP" Type="money" />
+    <Property Name="ProcessTimeIn" Type="int" />
+    <Property Name="Probation" Type="tinyint" />
+    <Property Name="DisallowAL" Type="tinyint" />
+    <Property Name="LE" Type="smallint" />
+    <Property Name="HE" Type="smallint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.LvAppl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="LvAppl">
+    <Key>
+      <PropertyRef Name="LvID" />
+    </Key>
+    <Property Name="LvID" Type="int" Nullable="false" />
+    <Property Name="LvDate" Type="smalldatetime" />
+    <Property Name="LvType" Type="nvarchar" MaxLength="4" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="FromDate" Type="smalldatetime" />
+    <Property Name="ToDate" Type="smalldatetime" />
+    <Property Name="NoDays" Type="real" />
+    <Property Name="HalfLeave" Type="tinyint" />
+    <Property Name="HalfAbsent" Type="tinyint" />
+    <Property Name="LvReason" Type="nvarchar" MaxLength="200" />
+    <Property Name="LvAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="DReason" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="10" />
+    <Property Name="Created" Type="smalldatetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="10" />
+    <Property Name="Updated" Type="smalldatetime" />
+    <Property Name="ApproveBy" Type="nvarchar" MaxLength="10" />
+    <Property Name="Approved" Type="smalldatetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="1" />
+    <Property Name="Version" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="LvData">
+    <Key>
+      <PropertyRef Name="EmpDate" />
+    </Key>
+    <Property Name="LvID" Type="int" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="DutyDate" Type="smalldatetime" />
+    <Property Name="EmpDate" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="DutyCode" Type="nvarchar" MaxLength="4" />
+    <Property Name="LvStatus" Type="tinyint" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="Version" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="ManagedBy">
+    <Key>
+      <PropertyRef Name="MID" />
+    </Key>
+    <Property Name="MID" Type="smallint" Nullable="false" />
+    <Property Name="ManagedBy" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ManualAtt">
+    <Key>
+      <PropertyRef Name="EmpDate" />
+    </Key>
+    <Property Name="SrlNo" Type="int" Nullable="false" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="AttDate" Type="smalldatetime" />
+    <Property Name="EmpDate" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="DutyCode" Type="nvarchar" MaxLength="4" />
+    <Property Name="DutyTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="Time0" Type="nvarchar" MaxLength="4" />
+    <Property Name="Time1" Type="nvarchar" MaxLength="4" />
+    <Property Name="StatusDD" Type="tinyint" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="15" />
+    <Property Name="Created" Type="smalldatetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Updated" Type="smalldatetime" />
+    <Property Name="ApproveBy" Type="nvarchar" MaxLength="15" />
+    <Property Name="Approved" Type="smalldatetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="PollData">
+    <Key>
+      <PropertyRef Name="TranNo" />
+    </Key>
+    <Property Name="TranNo" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PollAddress" Type="nvarchar" MaxLength="2" />
+    <Property Name="CardNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="DutyCode" Type="nvarchar" MaxLength="2" />
+    <Property Name="EntryDate" Type="smalldatetime" />
+    <Property Name="EntryTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="ReaderID" Type="smallint" />
+    <Property Name="EmpDate" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="Posting" Type="nvarchar" MaxLength="1" />
+    <Property Name="Status" Type="nvarchar" MaxLength="1" />
+    <Property Name="Split" Type="nvarchar" MaxLength="1" />
+    <Property Name="Version" Type="smallint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.PollData1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PollData1">
+    <Key>
+      <PropertyRef Name="TranNo" />
+    </Key>
+    <Property Name="TranNo" Type="bigint" Nullable="false" />
+    <Property Name="PollAddress" Type="nvarchar" MaxLength="2" />
+    <Property Name="CardNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="DutyCode" Type="nvarchar" MaxLength="2" />
+    <Property Name="EntryDate" Type="smalldatetime" />
+    <Property Name="EntryTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="ReaderID" Type="smallint" />
+    <Property Name="EmpDate" Type="nvarchar" MaxLength="12" />
+    <Property Name="Posting" Type="nvarchar" MaxLength="1" />
+    <Property Name="Status" Type="nvarchar" MaxLength="1" />
+    <Property Name="Split" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.Query4' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Query4">
+    <Key>
+      <PropertyRef Name="TranNo" />
+    </Key>
+    <Property Name="TranNo" Type="int" Nullable="false" />
+    <Property Name="PollAddress" Type="nvarchar" MaxLength="2" />
+    <Property Name="CardNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="DutyCode" Type="nvarchar" MaxLength="2" />
+    <Property Name="EntryDate" Type="smalldatetime" />
+    <Property Name="EntryTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="ReaderID" Type="smallint" />
+    <Property Name="EmpDate" Type="nvarchar" MaxLength="12" />
+    <Property Name="Posting" Type="nvarchar" MaxLength="1" />
+    <Property Name="Status" Type="nvarchar" MaxLength="1" />
+    <Property Name="Split" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Roster">
+    <Key>
+      <PropertyRef Name="EmpDate" />
+    </Key>
+    <Property Name="RosterID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="DutyDate" Type="smalldatetime" />
+    <Property Name="EmpDate" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="DutyCode" Type="nvarchar" MaxLength="4" />
+    <Property Name="DutyTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="WrkMin" Type="real" />
+    <Property Name="Version" Type="smallint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.Roster1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Roster1">
+    <Key>
+      <PropertyRef Name="RosterID" />
+    </Key>
+    <Property Name="RosterID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="DutyDate" Type="smalldatetime" />
+    <Property Name="EmpDate" Type="nvarchar" MaxLength="12" />
+    <Property Name="DutyCode" Type="nvarchar" MaxLength="4" />
+    <Property Name="DutyTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="WrkMin" Type="smallint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.RosterF' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="RosterF">
+    <Key>
+      <PropertyRef Name="RosterID" />
+    </Key>
+    <Property Name="RosterID" Type="bigint" Nullable="false" />
+    <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+    <Property Name="DutyDate" Type="smalldatetime" />
+    <Property Name="EmpDate" Type="nvarchar" MaxLength="12" />
+    <Property Name="DutyCode" Type="nvarchar" MaxLength="4" />
+    <Property Name="DutyTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="WrkMin" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.Section' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="smallint" Nullable="false" />
+    <Property Name="SectionName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Shift">
+    <Key>
+      <PropertyRef Name="ShiftID" />
+    </Key>
+    <Property Name="ShiftID" Type="smallint" Nullable="false" />
+    <Property Name="ShiftName" Type="nvarchar" MaxLength="255" />
+    <Property Name="ShiftTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="ShiftTypeID" Type="smallint" />
+    <Property Name="ShiftType" Type="nvarchar" MaxLength="1" />
+    <Property Name="Do1" Type="tinyint" />
+    <Property Name="Do2" Type="tinyint" />
+    <Property Name="Roster" Type="tinyint" />
+    <Property Name="Split" Type="tinyint" />
+    <Property Name="SplitMin" Type="smallint" />
+    <Property Name="RstrPeriod" Type="nvarchar" MaxLength="1" />
+    <Property Name="GH" Type="tinyint" />
+    <Property Name="SatWrkMin" Type="smallint" />
+    <Property Name="SunWrkMin" Type="smallint" />
+    <Property Name="MonWrkMin" Type="smallint" />
+    <Property Name="TueWrkMin" Type="smallint" />
+    <Property Name="WedWrkMin" Type="smallint" />
+    <Property Name="ThuWrkMin" Type="smallint" />
+    <Property Name="FriWrkMin" Type="smallint" />
+    <Property Name="WrkMin" Type="smallint" />
+    <Property Name="LateMin" Type="smallint" />
+    <Property Name="EarlyMinIn" Type="smallint" />
+    <Property Name="EarlyMinOut" Type="smallint" />
+    <Property Name="ExtraMin" Type="smallint" />
+    <Property Name="MinHrs" Type="smallint" />
+    <Property Name="Version" Type="smallint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.ShiftType' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ShiftType">
+    <Key>
+      <PropertyRef Name="ShiftTypeID" />
+    </Key>
+    <Property Name="ShiftTypeID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ShiftTypeName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.SystemLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="SystemLog">
+    <Key>
+      <PropertyRef Name="LogNo" />
+    </Key>
+    <Property Name="LogNo" Type="int" Nullable="false" />
+    <Property Name="LogDate" Type="smalldatetime" />
+    <Property Name="LogTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="LogText" Type="nvarchar" MaxLength="200" />
+    <Property Name="LogType" Type="tinyint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.VisData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VisData">
+    <Key>
+      <PropertyRef Name="VDataID" />
+      <PropertyRef Name="VisitorID" />
+    </Key>
+    <Property Name="VDataID" Type="int" Nullable="false" />
+    <Property Name="VisitorID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VisName" Type="nvarchar" MaxLength="40" />
+    <Property Name="Purpose" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmpID" Type="nvarchar" MaxLength="15" />
+    <Property Name="VLevelID" Type="smallint" />
+    <Property Name="CardNo" Type="nvarchar" MaxLength="8" />
+    <Property Name="ArrDate" Type="smalldatetime" />
+    <Property Name="ArrTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="DepDate" Type="smalldatetime" />
+    <Property Name="DepTime" Type="nvarchar" MaxLength="4" />
+    <Property Name="PickupCity" Type="nvarchar" MaxLength="40" />
+    <Property Name="DropCity" Type="nvarchar" MaxLength="40" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="VisitType" Type="nvarchar" MaxLength="1" />
+    <Property Name="Status" Type="nvarchar" MaxLength="1" />
+    <Property Name="Accomd" Type="nvarchar" MaxLength="20" />
+    <Property Name="SafetyInd" Type="tinyint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TAS_FF2000.dbo.Visitor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Visitor">
+    <Key>
+      <PropertyRef Name="VisID" />
+    </Key>
+    <Property Name="VisID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VisName" Type="nvarchar" MaxLength="40" />
+    <Property Name="NicNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Company" Type="nvarchar" MaxLength="50" />
+    <Property Name="OffPhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="CellPhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+    <Property Name="VisType" Type="tinyint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.AttCodes' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="AttCodes">
+        <Property Name="AttCode" Type="nvarchar" MaxLength="1" />
+        <Property Name="AttDesc" Type="nvarchar" MaxLength="20" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.AttData1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="AttData1">
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="AttDate" Type="smalldatetime" />
+        <Property Name="EmpDate" Type="nvarchar" MaxLength="12" />
+        <Property Name="DutyCode" Type="nvarchar" MaxLength="4" />
+        <Property Name="DutyTime" Type="nvarchar" MaxLength="4" />
+        <Property Name="Time0" Type="nvarchar" MaxLength="4" />
+        <Property Name="Time1" Type="nvarchar" MaxLength="4" />
+        <Property Name="Time2" Type="nvarchar" MaxLength="4" />
+        <Property Name="Time3" Type="nvarchar" MaxLength="4" />
+        <Property Name="LateMin" Type="smallint" />
+        <Property Name="EarlyMin" Type="smallint" />
+        <Property Name="WrkMin" Type="smallint" />
+        <Property Name="OtMin" Type="smallint" />
+        <Property Name="ExtraMin" Type="smallint" />
+        <Property Name="ExtraMinGz" Type="smallint" />
+        <Property Name="PDays" Type="real" />
+        <Property Name="VDays" Type="smallint" />
+        <Property Name="Remarks" Type="nvarchar" MaxLength="200" />
+        <Property Name="StatusNR" Type="tinyint" />
+        <Property Name="StatusLT" Type="tinyint" />
+        <Property Name="StatusER" Type="tinyint" />
+        <Property Name="StatusAB" Type="tinyint" />
+        <Property Name="StatusLV" Type="tinyint" />
+        <Property Name="StatusDO" Type="tinyint" />
+        <Property Name="StatusHD" Type="tinyint" />
+        <Property Name="StatusSL" Type="tinyint" />
+        <Property Name="StatusOT" Type="tinyint" />
+        <Property Name="StatusMN" Type="tinyint" />
+        <Property Name="ShiftWrkMin" Type="smallint" />
+        <Property Name="SplitShift" Type="tinyint" />
+        <Property Name="ShiftBrkMin" Type="smallint" />
+        <Property Name="GP" Type="money" />
+        <Property Name="EmpID" Type="nvarchar" MaxLength="10" />
+        <Property Name="EmpName" Type="nvarchar" MaxLength="40" />
+        <Property Name="Designation" Type="nvarchar" MaxLength="40" />
+        <Property Name="DeptID" Type="smallint" />
+        <Property Name="ShiftID" Type="smallint" />
+        <Property Name="LocID" Type="smallint" />
+        <Property Name="BP" Type="money" />
+        <Property Name="Tin0" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout0" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin1" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout1" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin2" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout2" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin3" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout3" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin4" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout4" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin5" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout5" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin6" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout6" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin7" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout7" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin8" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout8" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin9" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout9" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin10" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout10" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin11" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout11" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin12" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout12" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin13" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout13" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin14" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout14" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin15" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout15" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin16" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout16" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin17" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout17" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin18" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout18" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin19" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout19" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin20" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout20" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin21" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout21" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin22" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout22" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin23" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout23" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin24" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout24" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin25" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout25" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin26" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout26" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin27" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout27" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin28" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout28" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin29" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout29" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin31" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout31" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin32" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout32" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin33" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout33" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin34" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout34" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin35" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout35" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin36" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout36" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin37" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout37" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin38" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout38" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin39" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout39" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin40" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout40" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin41" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout41" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin42" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout42" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin43" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout43" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tin44" Type="nvarchar" MaxLength="4" />
+        <Property Name="Tout44" Type="nvarchar" MaxLength="4" />
+        <Property Name="ProcessTimeIn" Type="tinyint" />
+        <Property Name="StatusAB3" Type="tinyint" />
+        <Property Name="TypeID" Type="smallint" />
+        <Property Name="StatusNOT" Type="smallint" />
+        <Property Name="StatusGzOT" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.AttDataIn' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="AttDataIn">
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="EmpDate" Type="nvarchar" MaxLength="12" />
+        <Property Name="AttDate" Type="smalldatetime" />
+        <Property Name="DutyCode" Type="nvarchar" MaxLength="4" />
+        <Property Name="DutyTime" Type="nvarchar" MaxLength="4" />
+        <Property Name="Time0" Type="nvarchar" MaxLength="4" />
+        <Property Name="Reader0" Type="smallint" />
+        <Property Name="LateMin" Type="smallint" />
+        <Property Name="EarlyMin" Type="smallint" />
+        <Property Name="StatusAB" Type="tinyint" />
+        <Property Name="StatusLT" Type="tinyint" />
+        <Property Name="StatusLV" Type="tinyint" />
+        <Property Name="StatusDO" Type="tinyint" />
+        <Property Name="StatusNR" Type="tinyint" />
+        <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.AutoNum' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="AutoNum">
+        <Property Name="CtrType" Type="nvarchar" MaxLength="10" />
+        <Property Name="CtrValue" Type="int" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.DownloadTime' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="DownloadTime">
+        <Property Name="LoadTime" Type="nvarchar" MaxLength="4" />
+        <Property Name="Description" Type="nvarchar" MaxLength="30" />
+        <Property Name="AutoExpire" Type="tinyint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.DutyCode' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="DutyCode">
+        <Property Name="DutyID" Type="smallint" />
+        <Property Name="DutyName" Type="nvarchar" MaxLength="20" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.DutyTime' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="DutyTime">
+        <Property Name="DutyTime" Type="nvarchar" MaxLength="4" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Emp Query' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Emp Query">
+        <Property Name="Expr1000" Type="int" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Emp1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Emp1">
+        <Property Name="EmpID" Type="nvarchar" MaxLength="10" />
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="CardNo" Type="nvarchar" MaxLength="8" />
+        <Property Name="FpID" Type="int" />
+        <Property Name="PinCode" Type="nvarchar" MaxLength="4" />
+        <Property Name="ValidDate" Type="smalldatetime" />
+        <Property Name="EmpName" Type="nvarchar" MaxLength="255" />
+        <Property Name="FatherName" Type="nvarchar" MaxLength="255" />
+        <Property Name="BloodGroup" Type="nvarchar" MaxLength="3" />
+        <Property Name="BirthDate" Type="smalldatetime" />
+        <Property Name="Gender" Type="smallint" />
+        <Property Name="MarStatus" Type="smallint" />
+        <Property Name="NicNo" Type="nvarchar" MaxLength="20" />
+        <Property Name="PstAddress" Type="nvarchar" MaxLength="75" />
+        <Property Name="Reference" Type="nvarchar" MaxLength="50" />
+        <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+        <Property Name="DeptID" Type="smallint" />
+        <Property Name="LocID" Type="smallint" />
+        <Property Name="ShiftID" Type="smallint" />
+        <Property Name="GradeID" Type="smallint" />
+        <Property Name="TypeID" Type="smallint" />
+        <Property Name="JobID" Type="smallint" />
+        <Property Name="JoinDate" Type="smalldatetime" />
+        <Property Name="OverTime" Type="tinyint" />
+        <Property Name="OtRate" Type="money" />
+        <Property Name="WeeklyRest" Type="tinyint" />
+        <Property Name="AL" Type="money" />
+        <Property Name="CL" Type="money" />
+        <Property Name="SL" Type="money" />
+        <Property Name="CPL" Type="money" />
+        <Property Name="TotalLv" Type="money" />
+        <Property Name="HourBal" Type="smallint" />
+        <Property Name="ALDue" Type="smalldatetime" />
+        <Property Name="PFBalance" Type="money" />
+        <Property Name="GP" Type="money" />
+        <Property Name="AsBal" Type="money" />
+        <Property Name="All1" Type="money" />
+        <Property Name="All2" Type="money" />
+        <Property Name="All3" Type="money" />
+        <Property Name="All4" Type="money" />
+        <Property Name="All5" Type="money" />
+        <Property Name="All6" Type="money" />
+        <Property Name="Ded1" Type="money" />
+        <Property Name="Ded2" Type="money" />
+        <Property Name="Ded3" Type="money" />
+        <Property Name="Ded4" Type="money" />
+        <Property Name="Ded5" Type="money" />
+        <Property Name="Ded6" Type="money" />
+        <Property Name="Bank" Type="nvarchar" MaxLength="20" />
+        <Property Name="AccNo" Type="nvarchar" MaxLength="20" />
+        <Property Name="ResignDate" Type="smalldatetime" />
+        <Property Name="Status" Type="nvarchar" MaxLength="1" />
+        <Property Name="SsNo" Type="nvarchar" MaxLength="20" />
+        <Property Name="EobiNo" Type="nvarchar" MaxLength="20" />
+        <Property Name="HInsuranceNo" Type="nvarchar" MaxLength="20" />
+        <Property Name="Remarks" Type="nvarchar" MaxLength="200" />
+        <Property Name="LIDate" Type="smalldatetime" />
+        <Property Name="LIAmount" Type="smallint" />
+        <Property Name="NIDate" Type="smalldatetime" />
+        <Property Name="PFDed" Type="smallint" />
+        <Property Name="Eobi" Type="smallint" />
+        <Property Name="Bonus" Type="smallint" />
+        <Property Name="NoWarning" Type="smallint" />
+        <Property Name="ResignID" Type="smallint" />
+        <Property Name="NumRegFp" Type="smallint" />
+        <Property Name="AccessType" Type="tinyint" />
+        <Property Name="ProcessAtt" Type="tinyint" />
+        <Property Name="FlgFpData1" Type="nvarchar" MaxLength="1" />
+        <Property Name="FlgFpData2" Type="nvarchar" MaxLength="1" />
+        <Property Name="FlgFpData3" Type="nvarchar" MaxLength="1" />
+        <Property Name="BP" Type="money" />
+        <Property Name="ProcessTimeIn" Type="int" />
+        <Property Name="Probation" Type="tinyint" />
+        <Property Name="DisallowAL" Type="tinyint" />
+        <Property Name="LE" Type="smallint" />
+        <Property Name="HE" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.EmpAccess' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="EmpAccess">
+        <Property Name="EmpRdr" Type="nvarchar" MaxLength="10" />
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="ReaderID" Type="smallint" />
+        <Property Name="TzString" Type="ntext" />
+        <Property Name="GrAccess" Type="smallint" />
+        <Property Name="TimeZone" Type="smallint" />
+        <Property Name="Z1" Type="smallint" />
+        <Property Name="Z2" Type="smallint" />
+        <Property Name="Z3" Type="smallint" />
+        <Property Name="Z4" Type="smallint" />
+        <Property Name="Z5" Type="smallint" />
+        <Property Name="Z6" Type="smallint" />
+        <Property Name="Z7" Type="smallint" />
+        <Property Name="Z8" Type="smallint" />
+        <Property Name="AllDays" Type="smallint" />
+        <Property Name="Sat" Type="smallint" />
+        <Property Name="Sun" Type="smallint" />
+        <Property Name="Mon" Type="smallint" />
+        <Property Name="Tue" Type="smallint" />
+        <Property Name="Wed" Type="smallint" />
+        <Property Name="Thu" Type="smallint" />
+        <Property Name="Fri" Type="smallint" />
+        <Property Name="BeginTime" Type="nvarchar" MaxLength="4" />
+        <Property Name="Endtime" Type="nvarchar" MaxLength="4" />
+        <Property Name="AccessDate" Type="smalldatetime" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.EmpFp1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="EmpFp1">
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="FpData1" Type="image" />
+        <Property Name="ZkData1" Type="ntext" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.EmpFp2' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="EmpFp2">
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="FpData2" Type="image" />
+        <Property Name="ZkData2" Type="ntext" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.EmpFp3' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="EmpFp3">
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="FpData3" Type="image" />
+        <Property Name="ZkData3" Type="ntext" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.EmpPhoto' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="EmpPhoto">
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="Photo" Type="image" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.EmpType' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="EmpType">
+        <Property Name="TypeID" Type="smallint" />
+        <Property Name="TypeName" Type="nvarchar" MaxLength="30" />
+        <Property Name="CatID" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Grade' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Grade">
+        <Property Name="GradeID" Type="smallint" />
+        <Property Name="GradeName" Type="nvarchar" MaxLength="40" />
+        <Property Name="CalcPay" Type="smallint" />
+        <Property Name="ShowAll" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Holidays' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Holidays">
+        <Property Name="HolDate" Type="nvarchar" MaxLength="4" />
+        <Property Name="Description" Type="nvarchar" MaxLength="50" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.JobTitle' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="JobTitle">
+        <Property Name="JobID" Type="smallint" />
+        <Property Name="JobName" Type="nvarchar" MaxLength="50" />
+        <Property Name="GradeID" Type="smallint" />
+        <Property Name="DailyRate" Type="smallint" />
+        <Property Name="JobOtRate" Type="smallint" />
+        <Property Name="JobOtRate2" Type="smallint" />
+        <Property Name="JobOtType" Type="smallint" />
+        <Property Name="GPay" Type="smallint" />
+        <Property Name="BPay" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Location' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Location">
+        <Property Name="LocID" Type="float" />
+        <Property Name="LocName" Type="nvarchar" MaxLength="255" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.LvCplAg' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="LvCplAg">
+        <Property Name="LvID" Type="int" />
+        <Property Name="CplAgainst" Type="smalldatetime" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.LvLedger' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="LvLedger">
+        <Property Name="LvID" Type="nvarchar" MaxLength="10" />
+        <Property Name="LvDate" Type="smalldatetime" />
+        <Property Name="LvType" Type="nvarchar" MaxLength="20" />
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="LvReason" Type="nvarchar" MaxLength="50" />
+        <Property Name="AL" Type="money" />
+        <Property Name="CL" Type="money" />
+        <Property Name="SL" Type="money" />
+        <Property Name="CPL" Type="money" />
+        <Property Name="Hours" Type="int" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.LvLedger1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="LvLedger1">
+        <Property Name="LvID" Type="nvarchar" MaxLength="10" />
+        <Property Name="LvDate" Type="smalldatetime" />
+        <Property Name="LvType" Type="nvarchar" MaxLength="20" />
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="LvReason" Type="nvarchar" MaxLength="50" />
+        <Property Name="AL" Type="money" />
+        <Property Name="CL" Type="money" />
+        <Property Name="SL" Type="money" />
+        <Property Name="CPL" Type="money" />
+        <Property Name="Hours" Type="int" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.LvType' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="LvType">
+        <Property Name="LvNo" Type="smallint" />
+        <Property Name="LvID" Type="nvarchar" MaxLength="4" />
+        <Property Name="Description" Type="nvarchar" MaxLength="30" />
+        <Property Name="FldName" Type="nvarchar" MaxLength="10" />
+        <Property Name="HalfLeave" Type="tinyint" />
+        <Property Name="HalfLeaveID" Type="nvarchar" MaxLength="4" />
+        <Property Name="HalfAbsentID" Type="nvarchar" MaxLength="4" />
+        <Property Name="MaxDays" Type="smallint" />
+        <Property Name="WorkDays" Type="real" />
+        <Property Name="VacDays" Type="real" />
+        <Property Name="MonthProcess" Type="tinyint" />
+        <Property Name="UpdateBalance" Type="tinyint" />
+        <Property Name="LvStatus" Type="tinyint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Options' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Options">
+        <Property Name="AutoReaderID" Type="tinyint" />
+        <Property Name="AutoDeptID" Type="tinyint" />
+        <Property Name="AutoSectionID" Type="tinyint" />
+        <Property Name="AutoCrewID" Type="tinyint" />
+        <Property Name="AutoDesignationID" Type="tinyint" />
+        <Property Name="AutoTypeID" Type="tinyint" />
+        <Property Name="AutoLocID" Type="tinyint" />
+        <Property Name="AutoJobID" Type="tinyint" />
+        <Property Name="AutoGradeID" Type="tinyint" />
+        <Property Name="AutoEmpType" Type="tinyint" />
+        <Property Name="AutoShiftID" Type="tinyint" />
+        <Property Name="AutoEmpID" Type="tinyint" />
+        <Property Name="LocPrefix" Type="tinyint" />
+        <Property Name="WeekStart" Type="smallint" />
+        <Property Name="DeleteDupAtt" Type="tinyint" />
+        <Property Name="SplitDate" Type="tinyint" />
+        <Property Name="RegMaxLate" Type="nvarchar" MaxLength="4" />
+        <Property Name="LateMin" Type="smallint" />
+        <Property Name="EarlyMinIn" Type="smallint" />
+        <Property Name="EarlyMinOut" Type="smallint" />
+        <Property Name="ExtraMin" Type="smallint" />
+        <Property Name="HalfDay" Type="smallint" />
+        <Property Name="MinHours" Type="smallint" />
+        <Property Name="MinInTime" Type="nvarchar" MaxLength="4" />
+        <Property Name="SrcPath" Type="nvarchar" MaxLength="100" />
+        <Property Name="DBName" Type="nvarchar" MaxLength="150" />
+        <Property Name="BackupPath" Type="nvarchar" MaxLength="150" />
+        <Property Name="DelayTime" Type="real" />
+        <Property Name="ReaderType" Type="smallint" />
+        <Property Name="LoadRetries" Type="smallint" />
+        <Property Name="BackPic" Type="nvarchar" MaxLength="150" />
+        <Property Name="MaxPhotoSize" Type="smallint" />
+        <Property Name="LicenseTo" Type="nvarchar" MaxLength="40" />
+        <Property Name="SerialNo" Type="nvarchar" MaxLength="10" />
+        <Property Name="All1" Type="nvarchar" MaxLength="30" />
+        <Property Name="All2" Type="nvarchar" MaxLength="30" />
+        <Property Name="All3" Type="nvarchar" MaxLength="30" />
+        <Property Name="All4" Type="nvarchar" MaxLength="30" />
+        <Property Name="All5" Type="nvarchar" MaxLength="30" />
+        <Property Name="All6" Type="nvarchar" MaxLength="30" />
+        <Property Name="Ded1" Type="nvarchar" MaxLength="30" />
+        <Property Name="Ded2" Type="nvarchar" MaxLength="30" />
+        <Property Name="Ded3" Type="nvarchar" MaxLength="30" />
+        <Property Name="Ded4" Type="nvarchar" MaxLength="30" />
+        <Property Name="Ded5" Type="nvarchar" MaxLength="30" />
+        <Property Name="Ded6" Type="nvarchar" MaxLength="30" />
+        <Property Name="OtFactor" Type="real" />
+        <Property Name="PayProcess" Type="smalldatetime" />
+        <Property Name="PrAttWarn" Type="tinyint" />
+        <Property Name="CalcWTime" Type="tinyint" />
+        <Property Name="AbsntRest" Type="tinyint" />
+        <Property Name="AutoStart" Type="tinyint" />
+        <Property Name="DelUserAll" Type="tinyint" />
+        <Property Name="ALEnt" Type="real" />
+        <Property Name="SLEnt" Type="real" />
+        <Property Name="CLEnt" Type="real" />
+        <Property Name="LateWT" Type="tinyint" />
+        <Property Name="MFromDate" Type="smalldatetime" />
+        <Property Name="MToDate" Type="smalldatetime" />
+        <Property Name="MProcessDays" Type="int" />
+        <Property Name="MProcessDate" Type="smalldatetime" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.OTData' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="OTData">
+        <Property Name="OtID" Type="int" />
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="JobID" Type="smallint" />
+        <Property Name="DefaultJob" Type="tinyint" />
+        <Property Name="OtRate" Type="smallint" />
+        <Property Name="ShiftType" Type="nvarchar" MaxLength="1" />
+        <Property Name="DutyDate" Type="smalldatetime" />
+        <Property Name="EmpDate" Type="nvarchar" MaxLength="12" />
+        <Property Name="OtMin" Type="smallint" />
+        <Property Name="OtDouble" Type="tinyint" />
+        <Property Name="Amount" Type="money" />
+        <Property Name="CreateBy" Type="nvarchar" MaxLength="10" />
+        <Property Name="Created" Type="smalldatetime" />
+        <Property Name="UpdateBy" Type="nvarchar" MaxLength="10" />
+        <Property Name="Updated" Type="smalldatetime" />
+        <Property Name="ApproveBy" Type="nvarchar" MaxLength="10" />
+        <Property Name="Approved" Type="smalldatetime" />
+        <Property Name="Remarks" Type="nvarchar" MaxLength="50" />
+        <Property Name="Status" Type="nvarchar" MaxLength="1" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Purpose' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Purpose">
+        <Property Name="PurposeID" Type="smallint" />
+        <Property Name="PurposeName" Type="nvarchar" MaxLength="20" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Query10' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Query10">
+        <Property Name="EmpID" Type="nvarchar" MaxLength="10" />
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="CardNo" Type="nvarchar" MaxLength="8" />
+        <Property Name="FpID" Type="int" />
+        <Property Name="PinCode" Type="nvarchar" MaxLength="4" />
+        <Property Name="ValidDate" Type="smalldatetime" />
+        <Property Name="EmpName" Type="nvarchar" MaxLength="255" />
+        <Property Name="FatherName" Type="nvarchar" MaxLength="255" />
+        <Property Name="BloodGroup" Type="nvarchar" MaxLength="3" />
+        <Property Name="BirthDate" Type="smalldatetime" />
+        <Property Name="Gender" Type="smallint" />
+        <Property Name="MarStatus" Type="smallint" />
+        <Property Name="NicNo" Type="nvarchar" MaxLength="20" />
+        <Property Name="PstAddress" Type="nvarchar" MaxLength="75" />
+        <Property Name="Reference" Type="nvarchar" MaxLength="50" />
+        <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+        <Property Name="DeptID" Type="smallint" />
+        <Property Name="LocID" Type="smallint" />
+        <Property Name="ShiftID" Type="smallint" />
+        <Property Name="GradeID" Type="smallint" />
+        <Property Name="TypeID" Type="smallint" />
+        <Property Name="JobID" Type="smallint" />
+        <Property Name="JoinDate" Type="smalldatetime" />
+        <Property Name="OverTime" Type="tinyint" />
+        <Property Name="OtRate" Type="money" />
+        <Property Name="WeeklyRest" Type="tinyint" />
+        <Property Name="AL" Type="money" />
+        <Property Name="CL" Type="money" />
+        <Property Name="SL" Type="money" />
+        <Property Name="CPL" Type="money" />
+        <Property Name="TotalLv" Type="money" />
+        <Property Name="HourBal" Type="smallint" />
+        <Property Name="ALDue" Type="smalldatetime" />
+        <Property Name="PFBalance" Type="money" />
+        <Property Name="GP" Type="money" />
+        <Property Name="AsBal" Type="money" />
+        <Property Name="All1" Type="money" />
+        <Property Name="All2" Type="money" />
+        <Property Name="All3" Type="money" />
+        <Property Name="All4" Type="money" />
+        <Property Name="All5" Type="money" />
+        <Property Name="All6" Type="money" />
+        <Property Name="Ded1" Type="money" />
+        <Property Name="Ded2" Type="money" />
+        <Property Name="Ded3" Type="money" />
+        <Property Name="Ded4" Type="money" />
+        <Property Name="Ded5" Type="money" />
+        <Property Name="Ded6" Type="money" />
+        <Property Name="Bank" Type="nvarchar" MaxLength="20" />
+        <Property Name="AccNo" Type="nvarchar" MaxLength="20" />
+        <Property Name="ResignDate" Type="smalldatetime" />
+        <Property Name="Status" Type="nvarchar" MaxLength="1" />
+        <Property Name="SsNo" Type="nvarchar" MaxLength="20" />
+        <Property Name="EobiNo" Type="nvarchar" MaxLength="20" />
+        <Property Name="HInsuranceNo" Type="nvarchar" MaxLength="20" />
+        <Property Name="Remarks" Type="nvarchar" MaxLength="200" />
+        <Property Name="LIDate" Type="smalldatetime" />
+        <Property Name="LIAmount" Type="smallint" />
+        <Property Name="NIDate" Type="smalldatetime" />
+        <Property Name="PFDed" Type="smallint" />
+        <Property Name="Eobi" Type="smallint" />
+        <Property Name="Bonus" Type="smallint" />
+        <Property Name="NoWarning" Type="smallint" />
+        <Property Name="ResignID" Type="smallint" />
+        <Property Name="NumRegFp" Type="smallint" />
+        <Property Name="AccessType" Type="tinyint" />
+        <Property Name="ProcessAtt" Type="tinyint" />
+        <Property Name="FlgFpData1" Type="nvarchar" MaxLength="1" />
+        <Property Name="FlgFpData2" Type="nvarchar" MaxLength="1" />
+        <Property Name="FlgFpData3" Type="nvarchar" MaxLength="1" />
+        <Property Name="BP" Type="money" />
+        <Property Name="ProcessTimeIn" Type="int" />
+        <Property Name="Probation" Type="tinyint" />
+        <Property Name="DisallowAL" Type="tinyint" />
+        <Property Name="LE" Type="smallint" />
+        <Property Name="HE" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Query15' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Query15">
+        <Property Name="deptid" Type="smallint" />
+        <Property Name="empname" Type="nvarchar" MaxLength="255" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Query17' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Query17">
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.RdrType' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="RdrType">
+        <Property Name="RTypeID" Type="smallint" />
+        <Property Name="RTypeName" Type="nvarchar" MaxLength="20" />
+        <Property Name="CardDigits" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Reader' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Reader">
+        <Property Name="ReaderID" Type="smallint" />
+        <Property Name="ReaderName" Type="nvarchar" MaxLength="20" />
+        <Property Name="PollAddress" Type="nvarchar" MaxLength="2" />
+        <Property Name="ReaderType" Type="smallint" />
+        <Property Name="DutyID" Type="smallint" />
+        <Property Name="ConnID" Type="smallint" />
+        <Property Name="Port" Type="smallint" />
+        <Property Name="IPAddress" Type="nvarchar" MaxLength="40" />
+        <Property Name="TermPasswd" Type="nvarchar" MaxLength="4" />
+        <Property Name="DCAddress" Type="nvarchar" MaxLength="3" />
+        <Property Name="TimeZone" Type="tinyint" />
+        <Property Name="PersonalMap" Type="tinyint" />
+        <Property Name="TzID" Type="smallint" />
+        <Property Name="RelTime" Type="smallint" />
+        <Property Name="OpMode" Type="tinyint" />
+        <Property Name="Status" Type="nvarchar" MaxLength="1" />
+        <Property Name="CardDigits" Type="smallint" />
+        <Property Name="PortLock" Type="int" />
+        <Property Name="Version" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.ReaderConn' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="ReaderConn">
+        <Property Name="ConnID" Type="smallint" />
+        <Property Name="ConnName" Type="nvarchar" MaxLength="20" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.ResignType' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="ResignType">
+        <Property Name="ResignID" Type="smallint" />
+        <Property Name="ResignName" Type="nvarchar" MaxLength="30" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.SLData' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="SLData">
+        <Property Name="SlID" Type="int" />
+        <Property Name="EmpNo" Type="nvarchar" MaxLength="6" />
+        <Property Name="DutyDate" Type="smalldatetime" />
+        <Property Name="EmpDate" Type="nvarchar" MaxLength="12" />
+        <Property Name="SHour" Type="nvarchar" MaxLength="4" />
+        <Property Name="EHour" Type="nvarchar" MaxLength="4" />
+        <Property Name="Hours" Type="real" />
+        <Property Name="AdjHours" Type="tinyint" />
+        <Property Name="Remarks" Type="nvarchar" MaxLength="100" />
+        <Property Name="CreateBy" Type="nvarchar" MaxLength="10" />
+        <Property Name="Created" Type="smalldatetime" />
+        <Property Name="UpdateBy" Type="nvarchar" MaxLength="10" />
+        <Property Name="Updated" Type="smalldatetime" />
+        <Property Name="ApproveBy" Type="nvarchar" MaxLength="10" />
+        <Property Name="Approved" Type="smalldatetime" />
+        <Property Name="Status" Type="nvarchar" MaxLength="1" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.tbl_update_dummy' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="tbl_update_dummy">
+        <Property Name="EMPID" Type="nvarchar" MaxLength="10" />
+        <Property Name="EMPNO" Type="nvarchar" MaxLength="6" />
+        <Property Name="CARDNO" Type="nvarchar" MaxLength="10" />
+        <Property Name="EMPNAME" Type="nvarchar" MaxLength="255" />
+        <Property Name="DESIGNATION" Type="nvarchar" MaxLength="255" />
+        <Property Name="DEPARTMENT" Type="nvarchar" MaxLength="255" />
+        <Property Name="CORRECT_DESG" Type="nvarchar" MaxLength="255" />
+        <Property Name="DESIGNATIONID" Type="smallint" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.TzGroup' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="TzGroup">
+        <Property Name="TzID" Type="smallint" />
+        <Property Name="TzName" Type="nvarchar" MaxLength="50" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.TzSetting' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="TzSetting">
+        <Property Name="TzID" Type="smallint" />
+        <Property Name="TzNo" Type="nvarchar" MaxLength="4" />
+        <Property Name="TzName" Type="nvarchar" MaxLength="50" />
+        <Property Name="Begin" Type="nvarchar" MaxLength="4" />
+        <Property Name="End" Type="nvarchar" MaxLength="4" />
+        <Property Name="Sun" Type="tinyint" />
+        <Property Name="Mon" Type="tinyint" />
+        <Property Name="Tue" Type="tinyint" />
+        <Property Name="Wed" Type="tinyint" />
+        <Property Name="Thu" Type="tinyint" />
+        <Property Name="Fri" Type="tinyint" />
+        <Property Name="Sat" Type="tinyint" />
+        <Property Name="TzCode" Type="nvarchar" MaxLength="8" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.UserRole' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="UserRole">
+        <Property Name="RoleID" Type="smallint" />
+        <Property Name="RoleName" Type="nvarchar" MaxLength="20" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.Users' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Users">
+        <Property Name="UserID" Type="nvarchar" MaxLength="10" />
+        <Property Name="UserName" Type="nvarchar" MaxLength="40" />
+        <Property Name="Password" Type="nvarchar" MaxLength="10" />
+        <Property Name="RoleID" Type="smallint" />
+        <Property Name="Status" Type="nvarchar" MaxLength="1" />
+        <Property Name="EmpID" Type="nvarchar" MaxLength="10" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.VisPhoto' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="VisPhoto">
+        <Property Name="VisID" Type="int" />
+        <Property Name="Photo" Type="image" />
+      </EntityType>
+      Errors Found During Generation:
+      warning 6013: The table/view 'TAS_FF2000.dbo.VisType' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="VisType">
+        <Property Name="VTypeID" Type="smallint" />
+        <Property Name="VTypeName" Type="nvarchar" MaxLength="20" />
+      </EntityType>-->
+</Schema>

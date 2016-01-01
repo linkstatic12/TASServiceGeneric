@@ -1,0 +1,1226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TAS_FF2000Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="TAS_FF2000Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Abnormals" EntityType="TAS_FF2000Model.Abnormal" />
+    <EntitySet Name="AttDatas" EntityType="TAS_FF2000Model.AttData" />
+    <EntitySet Name="AttDataMns" EntityType="TAS_FF2000Model.AttDataMn" />
+    <EntitySet Name="AttDataMnCnts" EntityType="TAS_FF2000Model.AttDataMnCnt" />
+    <EntitySet Name="AttMnFulls" EntityType="TAS_FF2000Model.AttMnFull" />
+    <EntitySet Name="AttMnPers" EntityType="TAS_FF2000Model.AttMnPer" />
+    <EntitySet Name="Categories" EntityType="TAS_FF2000Model.Category" />
+    <EntitySet Name="Companies" EntityType="TAS_FF2000Model.Company" />
+    <EntitySet Name="Crews" EntityType="TAS_FF2000Model.Crew" />
+    <EntitySet Name="Depts" EntityType="TAS_FF2000Model.Dept" />
+    <EntitySet Name="Designations" EntityType="TAS_FF2000Model.Designation" />
+    <EntitySet Name="dtproperties" EntityType="TAS_FF2000Model.dtproperty" />
+    <EntitySet Name="EMPs" EntityType="TAS_FF2000Model.EMP" />
+    <EntitySet Name="EMP_jul01" EntityType="TAS_FF2000Model.EMP_jul01" />
+    <EntitySet Name="LvAppls" EntityType="TAS_FF2000Model.LvAppl" />
+    <EntitySet Name="LvDatas" EntityType="TAS_FF2000Model.LvData" />
+    <EntitySet Name="ManagedBies" EntityType="TAS_FF2000Model.ManagedBy" />
+    <EntitySet Name="ManualAtts" EntityType="TAS_FF2000Model.ManualAtt" />
+    <EntitySet Name="PollDatas" EntityType="TAS_FF2000Model.PollData" />
+    <EntitySet Name="PollData1" EntityType="TAS_FF2000Model.PollData1" />
+    <EntitySet Name="Query4" EntityType="TAS_FF2000Model.Query4" />
+    <EntitySet Name="Rosters" EntityType="TAS_FF2000Model.Roster" />
+    <EntitySet Name="Roster1" EntityType="TAS_FF2000Model.Roster1" />
+    <EntitySet Name="RosterFs" EntityType="TAS_FF2000Model.RosterF" />
+    <EntitySet Name="Sections" EntityType="TAS_FF2000Model.Section" />
+    <EntitySet Name="Shifts" EntityType="TAS_FF2000Model.Shift" />
+    <EntitySet Name="ShiftTypes" EntityType="TAS_FF2000Model.ShiftType" />
+    <EntitySet Name="SystemLogs" EntityType="TAS_FF2000Model.SystemLog" />
+    <EntitySet Name="VisDatas" EntityType="TAS_FF2000Model.VisData" />
+    <EntitySet Name="Visitors" EntityType="TAS_FF2000Model.Visitor" />
+  </EntityContainer>
+  <EntityType Name="Abnormal">
+    <Key>
+      <PropertyRef Name="AbDataNo" />
+    </Key>
+    <Property Type="Int32" Name="AbDataNo" Nullable="false" />
+    <Property Type="DateTime" Name="AbDate" />
+    <Property Type="String" Name="AbString" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="ReaderID" />
+  </EntityType>
+  <EntityType Name="AttData">
+    <Key>
+      <PropertyRef Name="EmpDate" />
+    </Key>
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AttDate" />
+    <Property Type="String" Name="EmpID" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpName" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Designation" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="DeptID" />
+    <Property Type="Int16" Name="ShiftID" />
+    <Property Type="String" Name="LocID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="BP" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="GP" Precision="19" Scale="4" />
+    <Property Type="Byte" Name="ProcessTimeIn" />
+    <Property Type="String" Name="EmpDate" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyCode" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Time0" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Time1" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Time2" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Time3" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin0" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout0" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin1" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout1" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin2" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout2" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin3" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout3" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin4" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout4" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin5" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout5" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin6" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout6" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin7" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout7" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin8" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout8" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin9" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout9" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin10" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout10" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin11" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout11" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin12" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout12" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin13" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout13" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin14" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout14" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin15" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout15" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin16" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout16" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin17" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout17" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin18" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout18" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin19" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout19" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin20" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout20" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin21" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout21" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin22" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout22" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin23" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout23" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin24" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout24" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin25" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout25" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin26" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout26" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin27" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout27" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin28" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout28" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin29" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout29" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin31" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout31" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin32" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout32" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin33" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout33" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin34" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout34" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin35" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout35" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin36" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout36" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin37" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout37" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin38" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout38" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin39" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout39" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin40" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout40" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin41" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout41" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin42" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout42" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin43" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout43" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tin44" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tout44" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="LateMin" />
+    <Property Type="Int16" Name="EarlyIn" />
+    <Property Type="Int16" Name="EarlyOut" />
+    <Property Type="Int16" Name="WrkMin" />
+    <Property Type="Int16" Name="ExtraMin" />
+    <Property Type="Int16" Name="ExtraMinGz" />
+    <Property Type="Int16" Name="OtMin" />
+    <Property Type="Single" Name="PDays" />
+    <Property Type="Int16" Name="VDays" />
+    <Property Type="String" Name="Remarks" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="StatusNR" />
+    <Property Type="Byte" Name="StatusLT" />
+    <Property Type="Byte" Name="StatusER" />
+    <Property Type="Byte" Name="StatusEI" />
+    <Property Type="Byte" Name="StatusAB" />
+    <Property Type="Byte" Name="StatusAB3" />
+    <Property Type="Byte" Name="StatusLV" />
+    <Property Type="Byte" Name="StatusDO" />
+    <Property Type="Byte" Name="StatusHD" />
+    <Property Type="Byte" Name="StatusSL" />
+    <Property Type="Byte" Name="StatusOT" />
+    <Property Type="Byte" Name="StatusLWP" />
+    <Property Type="Byte" Name="StatusMN" />
+    <Property Type="Int16" Name="ShiftWrkMin" />
+    <Property Type="Byte" Name="SplitShift" />
+    <Property Type="Int16" Name="ShiftBrkMin" />
+    <Property Type="Int16" Name="TypeID" />
+    <Property Type="Int16" Name="StatusNOT" />
+    <Property Type="Int16" Name="StatusGzOT" />
+    <Property Type="Int16" Name="ND" />
+  </EntityType>
+  <EntityType Name="AttDataMn">
+    <Key>
+      <PropertyRef Name="EmpMonth" />
+    </Key>
+    <Property Type="String" Name="Period" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpMonth" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpID" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpName" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Designation" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="LocID" />
+    <Property Type="Int16" Name="DeptID" />
+    <Property Type="Int16" Name="ShiftID" />
+    <Property Type="Int16" Name="NoDays" />
+    <Property Type="Decimal" Name="BP" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="GP" Precision="19" Scale="4" />
+    <Property Type="String" Name="D1" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D2" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D3" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D4" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D5" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D6" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D7" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D8" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D9" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D10" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D11" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D12" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D13" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D14" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D15" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D16" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D17" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D18" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D19" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D20" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D21" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D22" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D23" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D24" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D25" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D26" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D27" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D28" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D29" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D30" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D31" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Single" Name="PDays" />
+    <Property Type="Int16" Name="CntP" />
+    <Property Type="Int16" Name="CntA" />
+    <Property Type="Int16" Name="CntDO" />
+    <Property Type="Int16" Name="CntGH" />
+    <Property Type="Int16" Name="CntHD" />
+    <Property Type="Int16" Name="CntDD" />
+    <Property Type="Single" Name="CntCL" />
+    <Property Type="Single" Name="CntSL" />
+    <Property Type="Int16" Name="CntAL" />
+    <Property Type="Single" Name="CntSPL" />
+    <Property Type="Single" Name="CntCPL" />
+    <Property Type="Single" Name="CntSSL" />
+    <Property Type="Single" Name="CntOFD" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Single" Name="D1O" />
+    <Property Type="Single" Name="D2O" />
+    <Property Type="Single" Name="D3O" />
+    <Property Type="Single" Name="D4O" />
+    <Property Type="Single" Name="D5O" />
+    <Property Type="Single" Name="D6O" />
+    <Property Type="Single" Name="D7O" />
+    <Property Type="Single" Name="D8O" />
+    <Property Type="Single" Name="D9O" />
+    <Property Type="Single" Name="D10O" />
+    <Property Type="Single" Name="D11O" />
+    <Property Type="Single" Name="D12O" />
+    <Property Type="Single" Name="D13O" />
+    <Property Type="Single" Name="D14O" />
+    <Property Type="Single" Name="D15O" />
+    <Property Type="Single" Name="D16O" />
+    <Property Type="Single" Name="D17O" />
+    <Property Type="Single" Name="D18O" />
+    <Property Type="Single" Name="D19O" />
+    <Property Type="Single" Name="D20O" />
+    <Property Type="Single" Name="D21O" />
+    <Property Type="Single" Name="D22O" />
+    <Property Type="Single" Name="D23O" />
+    <Property Type="Single" Name="D24O" />
+    <Property Type="Single" Name="D25O" />
+    <Property Type="Single" Name="D26O" />
+    <Property Type="Single" Name="D27O" />
+    <Property Type="Single" Name="D28O" />
+    <Property Type="Single" Name="D29O" />
+    <Property Type="Single" Name="D30O" />
+    <Property Type="Single" Name="D31O" />
+    <Property Type="Single" Name="D1EI" />
+    <Property Type="Single" Name="D2EI" />
+    <Property Type="Single" Name="D3EI" />
+    <Property Type="Single" Name="D4EI" />
+    <Property Type="Single" Name="D5EI" />
+    <Property Type="Single" Name="D6EI" />
+    <Property Type="Single" Name="D7EI" />
+    <Property Type="Single" Name="D8EI" />
+    <Property Type="Single" Name="D9EI" />
+    <Property Type="Single" Name="D10EI" />
+    <Property Type="Single" Name="D11EI" />
+    <Property Type="Single" Name="D12EI" />
+    <Property Type="Single" Name="D13EI" />
+    <Property Type="Single" Name="D14EI" />
+    <Property Type="Single" Name="D15EI" />
+    <Property Type="Single" Name="D16EI" />
+    <Property Type="Single" Name="D17EI" />
+    <Property Type="Single" Name="D18EI" />
+    <Property Type="Single" Name="D19EI" />
+    <Property Type="Single" Name="D20EI" />
+    <Property Type="Single" Name="D21EI" />
+    <Property Type="Single" Name="D22EI" />
+    <Property Type="Single" Name="D23EI" />
+    <Property Type="Single" Name="D24EI" />
+    <Property Type="Single" Name="D25EI" />
+    <Property Type="Single" Name="D26EI" />
+    <Property Type="Single" Name="D27EI" />
+    <Property Type="Single" Name="D28EI" />
+    <Property Type="Single" Name="D29EI" />
+    <Property Type="Single" Name="D30EI" />
+    <Property Type="Single" Name="D31EI" />
+    <Property Type="Single" Name="D1EO" />
+    <Property Type="Single" Name="D2EO" />
+    <Property Type="Single" Name="D3EO" />
+    <Property Type="Single" Name="D4EO" />
+    <Property Type="Single" Name="D5EO" />
+    <Property Type="Single" Name="D6EO" />
+    <Property Type="Single" Name="D7EO" />
+    <Property Type="Single" Name="D8EO" />
+    <Property Type="Single" Name="D9EO" />
+    <Property Type="Single" Name="D10EO" />
+    <Property Type="Single" Name="D11EO" />
+    <Property Type="Single" Name="D12EO" />
+    <Property Type="Single" Name="D13EO" />
+    <Property Type="Single" Name="D14EO" />
+    <Property Type="Single" Name="D15EO" />
+    <Property Type="Single" Name="D16EO" />
+    <Property Type="Single" Name="D17EO" />
+    <Property Type="Single" Name="D18EO" />
+    <Property Type="Single" Name="D19EO" />
+    <Property Type="Single" Name="D20EO" />
+    <Property Type="Single" Name="D21EO" />
+    <Property Type="Single" Name="D22EO" />
+    <Property Type="Single" Name="D23EO" />
+    <Property Type="Single" Name="D24EO" />
+    <Property Type="Single" Name="D25EO" />
+    <Property Type="Single" Name="D26EO" />
+    <Property Type="Single" Name="D27EO" />
+    <Property Type="Single" Name="D28EO" />
+    <Property Type="Single" Name="D29EO" />
+    <Property Type="Single" Name="D30EO" />
+    <Property Type="Single" Name="D31EO" />
+    <Property Type="Single" Name="D1LI" />
+    <Property Type="Single" Name="D2LI" />
+    <Property Type="Single" Name="D3LI" />
+    <Property Type="Single" Name="D4LI" />
+    <Property Type="Single" Name="D5LI" />
+    <Property Type="Single" Name="D6LI" />
+    <Property Type="Single" Name="D7LI" />
+    <Property Type="Single" Name="D8LI" />
+    <Property Type="Single" Name="D9LI" />
+    <Property Type="Single" Name="D10LI" />
+    <Property Type="Single" Name="D11LI" />
+    <Property Type="Single" Name="D12LI" />
+    <Property Type="Single" Name="D13LI" />
+    <Property Type="Single" Name="D14LI" />
+    <Property Type="Single" Name="D15LI" />
+    <Property Type="Single" Name="D16LI" />
+    <Property Type="Single" Name="D17LI" />
+    <Property Type="Single" Name="D18LI" />
+    <Property Type="Single" Name="D19LI" />
+    <Property Type="Single" Name="D20LI" />
+    <Property Type="Single" Name="D21LI" />
+    <Property Type="Single" Name="D22LI" />
+    <Property Type="Single" Name="D23LI" />
+    <Property Type="Single" Name="D24LI" />
+    <Property Type="Single" Name="D25LI" />
+    <Property Type="Single" Name="D26LI" />
+    <Property Type="Single" Name="D27LI" />
+    <Property Type="Single" Name="D28LI" />
+    <Property Type="Single" Name="D29LI" />
+    <Property Type="Single" Name="D30LI" />
+    <Property Type="Single" Name="D31LI" />
+    <Property Type="Single" Name="CntOT" />
+    <Property Type="Single" Name="CntGzOT" />
+    <Property Type="Single" Name="CntLI" />
+    <Property Type="Single" Name="CntEI" />
+    <Property Type="Single" Name="CntEO" />
+    <Property Type="Single" Name="CntShort" />
+    <Property Type="Single" Name="CntExtra" />
+  </EntityType>
+  <EntityType Name="AttDataMnCnt">
+    <Key>
+      <PropertyRef Name="EmpMonth" />
+    </Key>
+    <Property Type="String" Name="Period" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpMonth" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpID" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpName" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Designation" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="LocID" />
+    <Property Type="Int16" Name="DeptID" />
+    <Property Type="Int16" Name="ShiftID" />
+    <Property Type="Int16" Name="NoDays" />
+    <Property Type="Decimal" Name="BP" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="GP" Precision="19" Scale="4" />
+    <Property Type="String" Name="D1" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D2" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D3" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D4" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D5" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D6" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D7" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D8" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D9" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D10" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D11" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D12" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D13" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D14" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D15" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D16" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D17" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D18" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D19" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D20" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D21" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D22" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D23" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D24" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D25" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D26" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D27" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D28" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D29" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D30" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D31" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Single" Name="PDays" />
+    <Property Type="Int16" Name="CntP" />
+    <Property Type="Int16" Name="CntA" />
+    <Property Type="Int16" Name="CntDO" />
+    <Property Type="Int16" Name="CntGH" />
+    <Property Type="Int16" Name="CntHD" />
+    <Property Type="Int16" Name="CntDD" />
+    <Property Type="Single" Name="CntCL" />
+    <Property Type="Single" Name="CntSL" />
+    <Property Type="Int16" Name="CntAL" />
+    <Property Type="Single" Name="CntSPL" />
+    <Property Type="Single" Name="CntCPL" />
+    <Property Type="Single" Name="CntSSL" />
+    <Property Type="Single" Name="CntOFD" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Single" Name="D1O" />
+    <Property Type="Single" Name="D2O" />
+    <Property Type="Single" Name="D3O" />
+    <Property Type="Single" Name="D4O" />
+    <Property Type="Single" Name="D5O" />
+    <Property Type="Single" Name="D6O" />
+    <Property Type="Single" Name="D7O" />
+    <Property Type="Single" Name="D8O" />
+    <Property Type="Single" Name="D9O" />
+    <Property Type="Single" Name="D10O" />
+    <Property Type="Single" Name="D11O" />
+    <Property Type="Single" Name="D12O" />
+    <Property Type="Single" Name="D13O" />
+    <Property Type="Single" Name="D14O" />
+    <Property Type="Single" Name="D15O" />
+    <Property Type="Single" Name="D16O" />
+    <Property Type="Single" Name="D17O" />
+    <Property Type="Single" Name="D18O" />
+    <Property Type="Single" Name="D19O" />
+    <Property Type="Single" Name="D20O" />
+    <Property Type="Single" Name="D21O" />
+    <Property Type="Single" Name="D22O" />
+    <Property Type="Single" Name="D23O" />
+    <Property Type="Single" Name="D24O" />
+    <Property Type="Single" Name="D25O" />
+    <Property Type="Single" Name="D26O" />
+    <Property Type="Single" Name="D27O" />
+    <Property Type="Single" Name="D28O" />
+    <Property Type="Single" Name="D29O" />
+    <Property Type="Single" Name="D30O" />
+    <Property Type="Single" Name="D31O" />
+    <Property Type="Single" Name="D1EI" />
+    <Property Type="Single" Name="D2EI" />
+    <Property Type="Single" Name="D3EI" />
+    <Property Type="Single" Name="D4EI" />
+    <Property Type="Single" Name="D5EI" />
+    <Property Type="Single" Name="D6EI" />
+    <Property Type="Single" Name="D7EI" />
+    <Property Type="Single" Name="D8EI" />
+    <Property Type="Single" Name="D9EI" />
+    <Property Type="Single" Name="D10EI" />
+    <Property Type="Single" Name="D11EI" />
+    <Property Type="Single" Name="D12EI" />
+    <Property Type="Single" Name="D13EI" />
+    <Property Type="Single" Name="D14EI" />
+    <Property Type="Single" Name="D15EI" />
+    <Property Type="Single" Name="D16EI" />
+    <Property Type="Single" Name="D17EI" />
+    <Property Type="Single" Name="D18EI" />
+    <Property Type="Single" Name="D19EI" />
+    <Property Type="Single" Name="D20EI" />
+    <Property Type="Single" Name="D21EI" />
+    <Property Type="Single" Name="D22EI" />
+    <Property Type="Single" Name="D23EI" />
+    <Property Type="Single" Name="D24EI" />
+    <Property Type="Single" Name="D25EI" />
+    <Property Type="Single" Name="D26EI" />
+    <Property Type="Single" Name="D27EI" />
+    <Property Type="Single" Name="D28EI" />
+    <Property Type="Single" Name="D29EI" />
+    <Property Type="Single" Name="D30EI" />
+    <Property Type="Single" Name="D31EI" />
+    <Property Type="Single" Name="D1EO" />
+    <Property Type="Single" Name="D2EO" />
+    <Property Type="Single" Name="D3EO" />
+    <Property Type="Single" Name="D4EO" />
+    <Property Type="Single" Name="D5EO" />
+    <Property Type="Single" Name="D6EO" />
+    <Property Type="Single" Name="D7EO" />
+    <Property Type="Single" Name="D8EO" />
+    <Property Type="Single" Name="D9EO" />
+    <Property Type="Single" Name="D10EO" />
+    <Property Type="Single" Name="D11EO" />
+    <Property Type="Single" Name="D12EO" />
+    <Property Type="Single" Name="D13EO" />
+    <Property Type="Single" Name="D14EO" />
+    <Property Type="Single" Name="D15EO" />
+    <Property Type="Single" Name="D16EO" />
+    <Property Type="Single" Name="D17EO" />
+    <Property Type="Single" Name="D18EO" />
+    <Property Type="Single" Name="D19EO" />
+    <Property Type="Single" Name="D20EO" />
+    <Property Type="Single" Name="D21EO" />
+    <Property Type="Single" Name="D22EO" />
+    <Property Type="Single" Name="D23EO" />
+    <Property Type="Single" Name="D24EO" />
+    <Property Type="Single" Name="D25EO" />
+    <Property Type="Single" Name="D26EO" />
+    <Property Type="Single" Name="D27EO" />
+    <Property Type="Single" Name="D28EO" />
+    <Property Type="Single" Name="D29EO" />
+    <Property Type="Single" Name="D30EO" />
+    <Property Type="Single" Name="D31EO" />
+    <Property Type="Single" Name="D1LI" />
+    <Property Type="Single" Name="D2LI" />
+    <Property Type="Single" Name="D3LI" />
+    <Property Type="Single" Name="D4LI" />
+    <Property Type="Single" Name="D5LI" />
+    <Property Type="Single" Name="D6LI" />
+    <Property Type="Single" Name="D7LI" />
+    <Property Type="Single" Name="D8LI" />
+    <Property Type="Single" Name="D9LI" />
+    <Property Type="Single" Name="D10LI" />
+    <Property Type="Single" Name="D11LI" />
+    <Property Type="Single" Name="D12LI" />
+    <Property Type="Single" Name="D13LI" />
+    <Property Type="Single" Name="D14LI" />
+    <Property Type="Single" Name="D15LI" />
+    <Property Type="Single" Name="D16LI" />
+    <Property Type="Single" Name="D17LI" />
+    <Property Type="Single" Name="D18LI" />
+    <Property Type="Single" Name="D19LI" />
+    <Property Type="Single" Name="D20LI" />
+    <Property Type="Single" Name="D21LI" />
+    <Property Type="Single" Name="D22LI" />
+    <Property Type="Single" Name="D23LI" />
+    <Property Type="Single" Name="D24LI" />
+    <Property Type="Single" Name="D25LI" />
+    <Property Type="Single" Name="D26LI" />
+    <Property Type="Single" Name="D27LI" />
+    <Property Type="Single" Name="D28LI" />
+    <Property Type="Single" Name="D29LI" />
+    <Property Type="Single" Name="D30LI" />
+    <Property Type="Single" Name="D31LI" />
+    <Property Type="Single" Name="CntOT" />
+    <Property Type="Single" Name="CntGzOT" />
+    <Property Type="Single" Name="CntLI" />
+    <Property Type="Single" Name="CntEI" />
+    <Property Type="Single" Name="CntEO" />
+    <Property Type="Single" Name="CntShort" />
+    <Property Type="Single" Name="CntExtra" />
+  </EntityType>
+  <EntityType Name="AttMnFull">
+    <Key>
+      <PropertyRef Name="EmpMonth" />
+    </Key>
+    <Property Type="String" Name="Period" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpMonth" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="EmpNo" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="EmpID" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="EmpName" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D1" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D2" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D3" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D4" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D5" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D6" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D7" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D8" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D9" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D10" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D11" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D12" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D13" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D14" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D15" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D16" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D17" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D18" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D19" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D20" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D21" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D22" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D23" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D24" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D25" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D26" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D27" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D28" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D29" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D30" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D31" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Byte" Name="TotalDays" />
+    <Property Type="Byte" Name="WorkDays" />
+    <Property Type="Byte" Name="PreDays" />
+    <Property Type="Byte" Name="AbDays" />
+    <Property Type="Byte" Name="RestDays" />
+    <Property Type="Byte" Name="GZDays" />
+    <Property Type="Byte" Name="LeaveDays" />
+    <Property Type="Byte" Name="OfficialDutyDays" />
+    <Property Type="Int16" Name="TEarlyIn" />
+    <Property Type="Int16" Name="TEarlyOut" />
+    <Property Type="Int16" Name="TLateIn" />
+    <Property Type="Int16" Name="TLateOut" />
+    <Property Type="Int16" Name="TWorkTime" />
+    <Property Type="Int16" Name="TNOT" />
+    <Property Type="Int16" Name="TGZOT" />
+    <Property Type="Int16" Name="ExpectedWrkTime" />
+    <Property Type="Int16" Name="OT1" />
+    <Property Type="Int16" Name="OT2" />
+    <Property Type="Int16" Name="OT3" />
+    <Property Type="Int16" Name="OT4" />
+    <Property Type="Int16" Name="OT5" />
+    <Property Type="Int16" Name="OT6" />
+    <Property Type="Int16" Name="OT7" />
+    <Property Type="Int16" Name="OT8" />
+    <Property Type="Int16" Name="OT9" />
+    <Property Type="Int16" Name="OT10" />
+    <Property Type="Int16" Name="OT11" />
+    <Property Type="Int16" Name="OT12" />
+    <Property Type="Int16" Name="OT13" />
+    <Property Type="Int16" Name="OT14" />
+    <Property Type="Int16" Name="OT15" />
+    <Property Type="Int16" Name="OT16" />
+    <Property Type="Int16" Name="OT17" />
+    <Property Type="Int16" Name="OT18" />
+    <Property Type="Int16" Name="OT19" />
+    <Property Type="Int16" Name="OT20" />
+    <Property Type="Int16" Name="OT21" />
+    <Property Type="Int16" Name="OT22" />
+    <Property Type="Int16" Name="OT23" />
+    <Property Type="Int16" Name="OT24" />
+    <Property Type="Int16" Name="OT25" />
+    <Property Type="Int16" Name="OT26" />
+    <Property Type="Int16" Name="OT27" />
+    <Property Type="Int16" Name="OT28" />
+    <Property Type="Int16" Name="OT29" />
+    <Property Type="Int16" Name="OT30" />
+    <Property Type="Int16" Name="OT31" />
+  </EntityType>
+  <EntityType Name="AttMnPer">
+    <Key>
+      <PropertyRef Name="EmpMonth" />
+    </Key>
+    <Property Type="String" Name="Period" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpMonth" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpID" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="D21" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D22" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D23" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D24" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D25" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D26" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D27" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D28" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D29" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D30" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D31" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D1" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D2" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D3" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D4" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D5" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D6" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D7" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D8" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D9" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D10" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D11" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D12" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D13" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D14" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D15" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D16" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D17" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D18" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D19" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="D20" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Byte" Name="TotalDays" />
+    <Property Type="Byte" Name="WorkDays" />
+    <Property Type="Byte" Name="PreDays" />
+    <Property Type="Byte" Name="AbDays" />
+    <Property Type="Byte" Name="RestDays" />
+    <Property Type="Byte" Name="GZDays" />
+    <Property Type="Byte" Name="LeaveDays" />
+    <Property Type="Byte" Name="OfficialDutyDays" />
+    <Property Type="Int16" Name="TEarlyIn" />
+    <Property Type="Int16" Name="TEarlyOut" />
+    <Property Type="Int16" Name="TLateIn" />
+    <Property Type="Int16" Name="TLateOut" />
+    <Property Type="Int16" Name="TWorkTime" />
+    <Property Type="Int16" Name="TNOT" />
+    <Property Type="Int16" Name="TGZOT" />
+    <Property Type="Int16" Name="ExpectedWrkTime" />
+    <Property Type="Int16" Name="OT1" />
+    <Property Type="Int16" Name="OT2" />
+    <Property Type="Int16" Name="OT3" />
+    <Property Type="Int16" Name="OT4" />
+    <Property Type="Int16" Name="OT5" />
+    <Property Type="Int16" Name="OT6" />
+    <Property Type="Int16" Name="OT7" />
+    <Property Type="Int16" Name="OT8" />
+    <Property Type="Int16" Name="OT9" />
+    <Property Type="Int16" Name="OT10" />
+    <Property Type="Int16" Name="OT11" />
+    <Property Type="Int16" Name="OT12" />
+    <Property Type="Int16" Name="OT13" />
+    <Property Type="Int16" Name="OT14" />
+    <Property Type="Int16" Name="OT15" />
+    <Property Type="Int16" Name="OT16" />
+    <Property Type="Int16" Name="OT17" />
+    <Property Type="Int16" Name="OT18" />
+    <Property Type="Int16" Name="OT19" />
+    <Property Type="Int16" Name="OT20" />
+    <Property Type="Int16" Name="OT21" />
+    <Property Type="Int16" Name="OT22" />
+    <Property Type="Int16" Name="OT23" />
+    <Property Type="Int16" Name="OT24" />
+    <Property Type="Int16" Name="OT25" />
+    <Property Type="Int16" Name="OT26" />
+    <Property Type="Int16" Name="OT27" />
+    <Property Type="Int16" Name="OT28" />
+    <Property Type="Int16" Name="OT29" />
+    <Property Type="Int16" Name="OT30" />
+    <Property Type="Int16" Name="OT31" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CatID" />
+    </Key>
+    <Property Type="Int16" Name="CatID" Nullable="false" />
+    <Property Type="String" Name="CatDesc" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompID" />
+    </Key>
+    <Property Type="String" Name="CompID" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CompName" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TelNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="SecLevel" />
+  </EntityType>
+  <EntityType Name="Crew">
+    <Key>
+      <PropertyRef Name="CrewID" />
+    </Key>
+    <Property Type="Int16" Name="CrewID" Nullable="false" />
+    <Property Type="String" Name="CrewName" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Dept">
+    <Key>
+      <PropertyRef Name="DeptID" />
+    </Key>
+    <Property Type="Int16" Name="DeptID" Nullable="false" />
+    <Property Type="String" Name="DeptName" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="DesignationID" />
+    </Key>
+    <Property Type="Double" Name="DesignationID" Nullable="false" />
+    <Property Type="String" Name="DesignationName" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dtproperty">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="objectid" />
+    <Property Type="String" Name="property" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="value" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="uvalue" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="lvalue" MaxLength="Max" FixedLength="false" />
+    <Property Type="Int32" Name="version" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMP">
+    <Key>
+      <PropertyRef Name="EMPNO" />
+    </Key>
+    <Property Type="String" Name="EmpID" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMPNO" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CardNo" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="FpID" />
+    <Property Type="String" Name="PinCode" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Bloodgroup" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="BirthDate" />
+    <Property Type="Int16" Name="Gender" />
+    <Property Type="Int16" Name="MarStatus" />
+    <Property Type="String" Name="NICNo" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PstAddress" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Reference" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Designation" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="DesignationID" />
+    <Property Type="Int16" Name="DeptID" />
+    <Property Type="Int16" Name="MID" />
+    <Property Type="Int16" Name="SectionID" />
+    <Property Type="Int16" Name="CrewID" />
+    <Property Type="Int16" Name="LocID" />
+    <Property Type="Int16" Name="ShiftID" />
+    <Property Type="Int16" Name="GradeID" />
+    <Property Type="Int16" Name="TypeID" />
+    <Property Type="Int16" Name="JobID" />
+    <Property Type="DateTime" Name="Validdate" />
+    <Property Type="DateTime" Name="Issuedate" />
+    <Property Type="DateTime" Name="JoinDate" />
+    <Property Type="Byte" Name="OverTime" />
+    <Property Type="Decimal" Name="OtRate" Precision="19" Scale="4" />
+    <Property Type="Byte" Name="WeeklyRest" />
+    <Property Type="Decimal" Name="AL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="CL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="SL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="CPL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TotalLv" Precision="19" Scale="4" />
+    <Property Type="Int16" Name="HourBal" />
+    <Property Type="DateTime" Name="ALDue" />
+    <Property Type="Decimal" Name="PFBalance" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="GP" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="AsBal" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All1" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All2" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All3" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All4" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All5" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All6" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded1" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded2" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded3" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded4" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded5" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded6" Precision="19" Scale="4" />
+    <Property Type="String" Name="Bank" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ResignDate" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SsNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EobiNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HInsuranceNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LIDate" />
+    <Property Type="Int16" Name="LIAmount" />
+    <Property Type="DateTime" Name="NIDate" />
+    <Property Type="Int16" Name="PFDed" />
+    <Property Type="Int16" Name="Eobi" />
+    <Property Type="Int16" Name="Bonus" />
+    <Property Type="Int16" Name="NoWarning" />
+    <Property Type="Int16" Name="ResignID" />
+    <Property Type="Int16" Name="NumRegFp" />
+    <Property Type="Byte" Name="AccessType" />
+    <Property Type="Byte" Name="ProcessAtt" />
+    <Property Type="String" Name="FlgFpData1" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FlgFpData2" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FlgFpData3" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="BP" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="ProcessTimeIn" />
+    <Property Type="Byte" Name="Probation" />
+    <Property Type="Byte" Name="DisallowAL" />
+    <Property Type="Int16" Name="LE" />
+    <Property Type="Int16" Name="HE" />
+    <Property Type="Int16" Name="Version" />
+  </EntityType>
+  <EntityType Name="EMP_jul01">
+    <Key>
+      <PropertyRef Name="EMPNO" />
+    </Key>
+    <Property Type="String" Name="EmpID" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMPNO" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CardNo" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="FpID" />
+    <Property Type="String" Name="PinCode" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Bloodgroup" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="BirthDate" />
+    <Property Type="Int16" Name="Gender" />
+    <Property Type="Int16" Name="MarStatus" />
+    <Property Type="String" Name="NICNo" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PstAddress" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Reference" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Designation" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="DesignationID" />
+    <Property Type="Int16" Name="DeptID" />
+    <Property Type="Int16" Name="SectionID" />
+    <Property Type="Int16" Name="CrewID" />
+    <Property Type="Int16" Name="LocID" />
+    <Property Type="Int16" Name="ShiftID" />
+    <Property Type="Int16" Name="GradeID" />
+    <Property Type="Int16" Name="TypeID" />
+    <Property Type="Int16" Name="JobID" />
+    <Property Type="DateTime" Name="Validdate" />
+    <Property Type="DateTime" Name="Issuedate" />
+    <Property Type="DateTime" Name="JoinDate" />
+    <Property Type="Byte" Name="OverTime" />
+    <Property Type="Decimal" Name="OtRate" Precision="19" Scale="4" />
+    <Property Type="Byte" Name="WeeklyRest" />
+    <Property Type="Decimal" Name="AL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="CL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="SL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="CPL" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TotalLv" Precision="19" Scale="4" />
+    <Property Type="Int16" Name="HourBal" />
+    <Property Type="DateTime" Name="ALDue" />
+    <Property Type="Decimal" Name="PFBalance" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="GP" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="AsBal" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All1" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All2" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All3" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All4" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All5" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="All6" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded1" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded2" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded3" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded4" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded5" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ded6" Precision="19" Scale="4" />
+    <Property Type="String" Name="Bank" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ResignDate" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SsNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EobiNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HInsuranceNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LIDate" />
+    <Property Type="Int16" Name="LIAmount" />
+    <Property Type="DateTime" Name="NIDate" />
+    <Property Type="Int16" Name="PFDed" />
+    <Property Type="Int16" Name="Eobi" />
+    <Property Type="Int16" Name="Bonus" />
+    <Property Type="Int16" Name="NoWarning" />
+    <Property Type="Int16" Name="ResignID" />
+    <Property Type="Int16" Name="NumRegFp" />
+    <Property Type="Byte" Name="AccessType" />
+    <Property Type="Byte" Name="ProcessAtt" />
+    <Property Type="String" Name="FlgFpData1" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FlgFpData2" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FlgFpData3" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="BP" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="ProcessTimeIn" />
+    <Property Type="Byte" Name="Probation" />
+    <Property Type="Byte" Name="DisallowAL" />
+    <Property Type="Int16" Name="LE" />
+    <Property Type="Int16" Name="HE" />
+  </EntityType>
+  <EntityType Name="LvAppl">
+    <Key>
+      <PropertyRef Name="LvID" />
+    </Key>
+    <Property Type="Int32" Name="LvID" Nullable="false" />
+    <Property Type="DateTime" Name="LvDate" />
+    <Property Type="String" Name="LvType" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FromDate" />
+    <Property Type="DateTime" Name="ToDate" />
+    <Property Type="Single" Name="NoDays" />
+    <Property Type="Byte" Name="HalfLeave" />
+    <Property Type="Byte" Name="HalfAbsent" />
+    <Property Type="String" Name="LvReason" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LvAddress" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DReason" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CreateBy" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Created" />
+    <Property Type="String" Name="UpdateBy" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Updated" />
+    <Property Type="String" Name="ApproveBy" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Approved" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="Version" />
+  </EntityType>
+  <EntityType Name="LvData">
+    <Key>
+      <PropertyRef Name="EmpDate" />
+    </Key>
+    <Property Type="Int32" Name="LvID" />
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DutyDate" />
+    <Property Type="String" Name="EmpDate" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyCode" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="LvStatus" />
+    <Property Type="String" Name="Remarks" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="Version" />
+  </EntityType>
+  <EntityType Name="ManagedBy">
+    <Key>
+      <PropertyRef Name="MID" />
+    </Key>
+    <Property Type="Int16" Name="MID" Nullable="false" />
+    <Property Type="String" Name="ManagedBy1" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ManualAtt">
+    <Key>
+      <PropertyRef Name="EmpDate" />
+    </Key>
+    <Property Type="Int32" Name="SrlNo" Nullable="false" />
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AttDate" />
+    <Property Type="String" Name="EmpDate" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyCode" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Time0" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Time1" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="StatusDD" />
+    <Property Type="String" Name="Remarks" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CreateBy" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Created" />
+    <Property Type="String" Name="UpdateBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Updated" />
+    <Property Type="String" Name="ApproveBy" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Approved" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PollData">
+    <Key>
+      <PropertyRef Name="TranNo" />
+    </Key>
+    <Property Type="Int64" Name="TranNo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PollAddress" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CardNo" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyCode" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EntryDate" />
+    <Property Type="String" Name="EntryTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="ReaderID" />
+    <Property Type="String" Name="EmpDate" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Posting" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Split" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="Version" />
+  </EntityType>
+  <EntityType Name="PollData1">
+    <Key>
+      <PropertyRef Name="TranNo" />
+    </Key>
+    <Property Type="Int64" Name="TranNo" Nullable="false" />
+    <Property Type="String" Name="PollAddress" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CardNo" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyCode" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EntryDate" />
+    <Property Type="String" Name="EntryTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="ReaderID" />
+    <Property Type="String" Name="EmpDate" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Posting" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Split" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Query4">
+    <Key>
+      <PropertyRef Name="TranNo" />
+    </Key>
+    <Property Type="Int32" Name="TranNo" Nullable="false" />
+    <Property Type="String" Name="PollAddress" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CardNo" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyCode" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="EntryDate" />
+    <Property Type="String" Name="EntryTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="ReaderID" />
+    <Property Type="String" Name="EmpDate" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Posting" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Split" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Roster">
+    <Key>
+      <PropertyRef Name="EmpDate" />
+    </Key>
+    <Property Type="Int64" Name="RosterID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DutyDate" />
+    <Property Type="String" Name="EmpDate" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyCode" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Single" Name="WrkMin" />
+    <Property Type="Int16" Name="Version" />
+  </EntityType>
+  <EntityType Name="Roster1">
+    <Key>
+      <PropertyRef Name="RosterID" />
+    </Key>
+    <Property Type="Int64" Name="RosterID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DutyDate" />
+    <Property Type="String" Name="EmpDate" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyCode" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="WrkMin" />
+  </EntityType>
+  <EntityType Name="RosterF">
+    <Key>
+      <PropertyRef Name="RosterID" />
+    </Key>
+    <Property Type="Int64" Name="RosterID" Nullable="false" />
+    <Property Type="String" Name="EmpNo" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DutyDate" />
+    <Property Type="String" Name="EmpDate" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyCode" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DutyTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="WrkMin" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Type="Int16" Name="SectionID" Nullable="false" />
+    <Property Type="String" Name="SectionName" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Shift">
+    <Key>
+      <PropertyRef Name="ShiftID" />
+    </Key>
+    <Property Type="Int16" Name="ShiftID" Nullable="false" />
+    <Property Type="String" Name="ShiftName" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShiftTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="ShiftTypeID" />
+    <Property Type="String" Name="ShiftType" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="Do1" />
+    <Property Type="Byte" Name="Do2" />
+    <Property Type="Byte" Name="Roster" />
+    <Property Type="Byte" Name="Split" />
+    <Property Type="Int16" Name="SplitMin" />
+    <Property Type="String" Name="RstrPeriod" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="GH" />
+    <Property Type="Int16" Name="SatWrkMin" />
+    <Property Type="Int16" Name="SunWrkMin" />
+    <Property Type="Int16" Name="MonWrkMin" />
+    <Property Type="Int16" Name="TueWrkMin" />
+    <Property Type="Int16" Name="WedWrkMin" />
+    <Property Type="Int16" Name="ThuWrkMin" />
+    <Property Type="Int16" Name="FriWrkMin" />
+    <Property Type="Int16" Name="WrkMin" />
+    <Property Type="Int16" Name="LateMin" />
+    <Property Type="Int16" Name="EarlyMinIn" />
+    <Property Type="Int16" Name="EarlyMinOut" />
+    <Property Type="Int16" Name="ExtraMin" />
+    <Property Type="Int16" Name="MinHrs" />
+    <Property Type="Int16" Name="Version" />
+  </EntityType>
+  <EntityType Name="ShiftType">
+    <Key>
+      <PropertyRef Name="ShiftTypeID" />
+    </Key>
+    <Property Type="Int16" Name="ShiftTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ShiftTypeName" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SystemLog">
+    <Key>
+      <PropertyRef Name="LogNo" />
+    </Key>
+    <Property Type="Int32" Name="LogNo" Nullable="false" />
+    <Property Type="DateTime" Name="LogDate" />
+    <Property Type="String" Name="LogTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LogText" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="LogType" />
+  </EntityType>
+  <EntityType Name="VisData">
+    <Key>
+      <PropertyRef Name="VDataID" />
+      <PropertyRef Name="VisitorID" />
+    </Key>
+    <Property Type="Int32" Name="VDataID" Nullable="false" />
+    <Property Type="Int32" Name="VisitorID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="VisName" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Purpose" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpID" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="VLevelID" />
+    <Property Type="String" Name="CardNo" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ArrDate" />
+    <Property Type="String" Name="ArrTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DepDate" />
+    <Property Type="String" Name="DepTime" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PickupCity" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DropCity" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="VisitType" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Accomd" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="SafetyInd" />
+  </EntityType>
+  <EntityType Name="Visitor">
+    <Key>
+      <PropertyRef Name="VisID" />
+    </Key>
+    <Property Type="Int32" Name="VisID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="VisName" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NicNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address1" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Company" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OffPhone" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CellPhone" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Byte" Name="VisType" />
+  </EntityType>
+</Schema>
